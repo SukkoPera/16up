@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name ExtraUserPort)(type KiCad)(uri ${KIPRJMOD}/ExtraUserPort.pretty)(options "")(descr ""))
+)
