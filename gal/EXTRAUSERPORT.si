@@ -1,0 +1,101 @@
+/* ExtraUserPort Simulation Input
+* Copyright 2022 SukkoPera <software@sukkology.net>
+*
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+Name     ExtraUserPort;
+PartNo   TBD;
+Date     31/08/2022;
+Revision 01;
+Designer SukkoPera;
+Company  OpenRetroWorks;
+Assembly None;
+Location Italy;
+Device   g16v8as;
+
+
+ORDER: intExt, addr, phi2, mos6529Cs; 
+
+
+VECTORS:
+/* "Totally wrong" addresses
+0 '000' 0 H
+1 '000' 0 H
+
+/* Close addresses, but no phi2 */
+0 'FD0' 0H
+0 'FD1' 0H
+0 'FD2' 0H
+0 'FD3' 0H
+0 'FD4' 0H
+0 'FD5' 0H
+0 'FD6' 0H
+0 'FD7' 0H
+0 'FD8' 0H
+0 'FD9' 0H
+0 'FDA' 0H
+0 'FDB' 0H
+0 'FDC' 0H
+0 'FDD' 0H
+0 'FDE' 0H
+0 'FDF' 0H
+1 'FD0' 0H
+1 'FD1' 0H
+1 'FD2' 0H
+1 'FD3' 0H
+1 'FD4' 0H
+1 'FD5' 0H
+1 'FD6' 0H
+1 'FD7' 0H
+1 'FD8' 0H
+1 'FD9' 0H
+1 'FDA' 0H
+1 'FDB' 0H
+1 'FDC' 0H
+1 'FDD' 0H
+1 'FDE' 0H
+1 'FDF' 0H
+/* Raise phi2 */
+0 'FD0' 1H
+0 'FD1' 1L  /* Yo! */
+0 'FD2' 1H
+0 'FD3' 1H
+0 'FD4' 1H
+0 'FD5' 1H
+0 'FD6' 1H
+0 'FD7' 1H
+0 'FD8' 1H
+0 'FD9' 1H
+0 'FDA' 1H
+0 'FDB' 1H
+0 'FDC' 1H
+0 'FDD' 1H
+0 'FDE' 1H
+0 'FDF' 1H
+1 'FD0' 1H
+1 'FD1' 1H
+1 'FD2' 1H
+1 'FD3' 1H
+1 'FD4' 1H
+1 'FD5' 1H
+1 'FD6' 1H
+1 'FD7' 1L
+1 'FD8' 1H
+1 'FD9' 1H
+1 'FDA' 1H
+1 'FDB' 1H
+1 'FDC' 1H
+1 'FDD' 1H
+1 'FDE' 1H
+1 'FDF' 1H

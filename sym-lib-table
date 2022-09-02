@@ -1,0 +1,8 @@
+(sym_lib_table
+  (lib (name C16-Exp-Port)(type Legacy)(uri ${KIPRJMOD}/libs/C16-Exp-Port.lib)(options "")(descr ""))
+  (lib (name void)(type Legacy)(uri ${KIPRJMOD}/libs/void.lib)(options "")(descr ""))
+  (lib (name W65C51S)(type Legacy)(uri ${KIPRJMOD}/libs/W65C51S.lib)(options "")(descr ""))
+  (lib (name MOS_6529)(type Legacy)(uri ${KIPRJMOD}/libs/MOS_6529.lib)(options "")(descr ""))
+  (lib (name PLUS4_USERPORT)(type Legacy)(uri ${KIPRJMOD}/libs/PLUS4_USERPORT.lib)(options "")(descr ""))
+  (lib (name MAX238)(type Legacy)(uri ${KIPRJMOD}/libs/MAX238.lib)(options "")(descr ""))
+)

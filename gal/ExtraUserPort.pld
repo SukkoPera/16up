@@ -1,0 +1,73 @@
+/* ExtraUserPort GAL Equations
+ * Copyright 2022 SukkoPera <software@sukkology.net>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
+/* These equations can be turned into a JED file through the WinCUPL software.
+ * Too bad it's Windows-only and full of bugs...
+ */
+
+/* Addresses:
+ * - $fd60-$fd63 for ACIA
+ * - $fd10 (Wreaks havoc on C16 because of D2 used as CST SENSE) or $fd70 for 6529B
+ */
+
+Name ExtraUserPort;
+Partno TBD;
+Date 31/08/2022;
+Revision 01;
+Designer SukkoPera;
+Company OpenRetroWorks;
+Assembly None;
+Location Italy;
+Device g16v8as;		// Simple Mode (Pins 15 and 16 are outputs only)
+
+/** Inputs **/
+Pin 1 = a15;
+Pin 2 = a13;
+Pin 3 = a11;
+Pin 4 = a10;
+Pin 5 = a9;
+Pin 6 = a8;
+Pin 7 = a7;
+Pin 8 = a6;
+Pin 9 = a5;
+Pin 11 = a4;
+Pin 17 = phi2;
+Pin 18 = a12;
+Pin 19 = a14;
+
+Pin 12 = intExt;			// 0 => Internal ($FD10), 1 => External ($FD70)
+
+Pin 13 = aciaA0;			// Desired ACIA A0 address bit
+Pin 14 = aciaA1;			// Desired ACIA A0 address bit
+
+/** Outputs **/
+Pin 15 = mos6529Cs;			// 6529 Enable (Active-low)
+Pin 16 = aciaCs;			// ACIA Enable (Active-low)
+
+/** Declarations and Intermediate Variable Definitions **/
+Field addr = [a15..4];
+
+/** Logic Equations **/
+intRange = addr:FD10;
+extRange = addr:FD70;
+mos6529Cs = !(phi2 & ((!intExt & intRange) # (intExt & extRange)));
+
+acia0 = !aciaA1 & !aciaA0 & addr:FD60;
+acia1 = !aciaA1 & aciaA0 & addr:FD61;
+acia2 = aciaA1 & !aciaA0 & addr:FD62;
+acia3 = aciaA1 & aciaA0 & addr:FD63;
+aciaCs = acia0 # acia1 # acia2 # acia3;
