@@ -1,4 +1,4 @@
-update=Fri 02 Sep 2022 21:49:23 CEST
+update=Fri 02 Sep 2022 23:27:35 CEST
 version=1
 last_client=kicad
 [general]
@@ -39,7 +39,7 @@ MinMicroViaDiameter=0.2
 MinMicroViaDrill=0.09999999999999999
 MinHoleToHole=0.25
 TrackWidth1=0.25
-ViaDiameter1=0.8
+ViaDiameter1=0.6
 ViaDrill1=0.4
 dPairWidth1=0.2
 dPairGap1=0.25
@@ -67,7 +67,7 @@ OthersTextUpright=1
 SolderMaskClearance=0
 SolderMaskMinWidth=0
 SolderPasteClearance=0
-SolderPasteRatio=0
+SolderPasteRatio=-0
 [pcbnew/Layer.F.Cu]
 Name=F.Cu
 Type=0
@@ -197,13 +197,13 @@ Name=B.Cu
 Type=0
 Enabled=1
 [pcbnew/Layer.B.Adhes]
-Enabled=1
+Enabled=0
 [pcbnew/Layer.F.Adhes]
-Enabled=1
+Enabled=0
 [pcbnew/Layer.B.Paste]
-Enabled=1
+Enabled=0
 [pcbnew/Layer.F.Paste]
-Enabled=1
+Enabled=0
 [pcbnew/Layer.B.SilkS]
 Enabled=1
 [pcbnew/Layer.F.SilkS]
@@ -215,7 +215,7 @@ Enabled=1
 [pcbnew/Layer.Dwgs.User]
 Enabled=1
 [pcbnew/Layer.Cmts.User]
-Enabled=1
+Enabled=0
 [pcbnew/Layer.Eco1.User]
 Enabled=1
 [pcbnew/Layer.Eco2.User]
@@ -229,18 +229,29 @@ Enabled=1
 [pcbnew/Layer.F.CrtYd]
 Enabled=1
 [pcbnew/Layer.B.Fab]
-Enabled=1
+Enabled=0
 [pcbnew/Layer.F.Fab]
 Enabled=1
 [pcbnew/Layer.Rescue]
-Enabled=1
+Enabled=0
 [pcbnew/Netclasses]
 [pcbnew/Netclasses/Default]
 Name=Default
 Clearance=0.2
 TrackWidth=0.25
-ViaDiameter=0.8
+ViaDiameter=0.6
 ViaDrill=0.4
+uViaDiameter=0.3
+uViaDrill=0.1
+dPairWidth=0.2
+dPairGap=0.25
+dPairViaGap=0.25
+[pcbnew/Netclasses/1]
+Name=Power
+Clearance=0.2
+TrackWidth=0.5
+ViaDiameter=0.8
+ViaDrill=0.6
 uViaDiameter=0.3
 uViaDrill=0.1
 dPairWidth=0.2
