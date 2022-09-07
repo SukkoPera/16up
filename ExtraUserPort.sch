@@ -5,7 +5,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 1
 Title "ExtraUserPort"
-Date "2022-09-04"
+Date "2022-09-07"
 Rev "1git"
 Comp "SukkoPera"
 Comment1 "Licensed under CC BY-NC-SA 4.0"
@@ -24,159 +24,8 @@ F 3 "DOCUMENTATION" H 9965 2500 50  0001 C CNN
 	1    9965 2500
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	6580 2280 6080 2280
-Wire Wire Line
-	6580 2380 6080 2380
-Wire Bus Line
-	6680 1425 4480 1425
-Wire Wire Line
-	6295 2815 6295 2715
-Wire Wire Line
-	6295 3115 6295 3210
-Wire Wire Line
-	5580 1480 5580 1370
-Wire Wire Line
-	5580 2880 5580 2955
-Wire Wire Line
-	6580 2180 6080 2180
-Wire Wire Line
-	6580 2080 6080 2080
-Wire Wire Line
-	6580 1780 6080 1780
-Wire Wire Line
-	6580 1680 6080 1680
-Wire Wire Line
-	5080 2480 4580 2480
-Wire Wire Line
-	5080 2380 4580 2380
-Wire Wire Line
-	5080 2280 4580 2280
-Wire Wire Line
-	5080 2180 4580 2180
-Wire Wire Line
-	5080 2080 4580 2080
-Wire Wire Line
-	5080 1980 4580 1980
-Wire Wire Line
-	5080 1880 4580 1880
-Wire Wire Line
-	5080 1780 4580 1780
-Wire Wire Line
-	5080 1680 4580 1680
-Entry Wire Line
-	6680 2280 6580 2380
-NoConn ~ 5080 2580
-Text Label 6580 2280 2    50   ~ 0
-phi2
-Text Label 6580 2380 2    50   ~ 0
-a5
-Entry Wire Line
-	6680 1680 6580 1780
-Entry Wire Line
-	6680 1580 6580 1680
-Entry Wire Line
-	4480 2380 4580 2480
-Entry Wire Line
-	4480 2280 4580 2380
-Entry Wire Line
-	4480 2180 4580 2280
-Entry Wire Line
-	4480 2080 4580 2180
-Entry Wire Line
-	4480 1980 4580 2080
-Entry Wire Line
-	4480 1880 4580 1980
-Entry Wire Line
-	4480 1780 4580 1880
-Entry Wire Line
-	4480 1680 4580 1780
-Entry Wire Line
-	4480 1580 4580 1680
-Text Notes 4975 1055 0    50   ~ 0
+Text Notes 5635 990  0    50   ~ 0
 CHIP-SELECT GENERATION\n(INSPIRED BY SOLDER'S SIDCARD)
-$Comp
-L power:+5V #PWR0106
-U 1 1 646BD3D1
-P 6295 2715
-F 0 "#PWR0106" H 6295 2565 50  0001 C CNN
-F 1 "+5V" H 6310 2888 50  0000 C CNN
-F 2 "" H 6295 2715 50  0001 C CNN
-F 3 "" H 6295 2715 50  0001 C CNN
-	1    6295 2715
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C1
-U 1 1 646BD3D8
-P 6295 2965
-F 0 "C1" H 6410 3011 50  0000 L CNN
-F 1 "100n" H 6410 2920 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D7.0mm_W2.5mm_P5.00mm" H 6333 2815 50  0001 C CNN
-F 3 "~" H 6295 2965 50  0001 C CNN
-F 4 "810-FG28X7R1H104KNT0" H 6295 2965 50  0001 C CNN "MouserPN"
-	1    6295 2965
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0107
-U 1 1 646BD3DE
-P 6295 3210
-F 0 "#PWR0107" H 6295 2960 50  0001 C CNN
-F 1 "GND" H 6300 3037 50  0000 C CNN
-F 2 "" H 6295 3210 50  0001 C CNN
-F 3 "" H 6295 3210 50  0001 C CNN
-	1    6295 3210
-	1    0    0    -1  
-$EndComp
-Text Label 6580 2080 2    50   ~ 0
-~cs_par
-Text Label 6580 2180 2    50   ~ 0
-~cs_ser
-Text Label 4580 2480 0    50   ~ 0
-a4
-Text Label 4580 2380 0    50   ~ 0
-a6
-Text Label 4580 2280 0    50   ~ 0
-a7
-Text Label 4580 2180 0    50   ~ 0
-a8
-Text Label 4580 2080 0    50   ~ 0
-a9
-Text Label 4580 1980 0    50   ~ 0
-a10
-Text Label 4580 1880 0    50   ~ 0
-a11
-Text Label 6580 1780 2    50   ~ 0
-a12
-Text Label 4580 1780 0    50   ~ 0
-a13
-Text Label 6580 1680 2    50   ~ 0
-a14
-Text Label 4580 1680 0    50   ~ 0
-a15
-$Comp
-L power:+5V #PWR0108
-U 1 1 646BD3F1
-P 5580 1370
-F 0 "#PWR0108" H 5580 1220 50  0001 C CNN
-F 1 "+5V" H 5595 1543 50  0000 C CNN
-F 2 "" H 5580 1370 50  0001 C CNN
-F 3 "" H 5580 1370 50  0001 C CNN
-	1    5580 1370
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0109
-U 1 1 646BD3F7
-P 5580 2955
-F 0 "#PWR0109" H 5580 2705 50  0001 C CNN
-F 1 "GND" H 5585 2782 50  0000 C CNN
-F 2 "" H 5580 2955 50  0001 C CNN
-F 3 "" H 5580 2955 50  0001 C CNN
-	1    5580 2955
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9215 1980 8900 1980
 Text Label 8900 1980 0    50   ~ 0
@@ -185,10 +34,6 @@ Wire Wire Line
 	9215 2080 8900 2080
 Text Label 8900 2080 0    50   ~ 0
 r_~w
-Text Notes 6720 2080 0    50   ~ 0
-$FD70
-Text Notes 6720 2255 0    50   ~ 0
-$FD60-FD63\n(CONFIGURABLE WITH JP1)
 Wire Wire Line
 	10715 2320 10990 2320
 Wire Wire Line
@@ -773,8 +618,6 @@ Text Label 8940 2920 0    50   ~ 0
 d6
 Text Label 8940 3020 0    50   ~ 0
 d7
-Text Notes 6710 2670 0    50   ~ 0
-THESE ADDRESSES ARE THE SAME\nAS SOLDER'S "SPOILER" FOR THE\nSIMILAR PROJECT HE WAS WORKING\nON AND APPARENTLY NEVER COMPLETED
 Wire Wire Line
 	1685 1605 1580 1605
 Wire Wire Line
@@ -1024,18 +867,6 @@ d0
 Text Notes 2105 985  0    50   ~ 0
 INTERFACE TO C16
 $Comp
-L Logic_Programmable:GAL16V8 U1
-U 1 1 646BD3FE
-P 5580 2180
-F 0 "U1" H 5845 2780 50  0000 C CNN
-F 1 "GAL16V8" H 5770 1575 50  0000 C CNN
-F 2 "Package_DIP:DIP-20_W7.62mm_Socket_LongPads" H 5580 2180 50  0001 C CNN
-F 3 "" H 5580 2180 50  0001 C CNN
-F 4 " 556-AF16V8B15PU" H 5580 2180 50  0001 C CNN "MouserPN"
-	1    5580 2180
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:CP1 C6
 U 1 1 64757718
 P 9380 7765
@@ -1089,26 +920,6 @@ F 3 "~" H 1240 4005 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1240 4005 1580 4005
-Wire Wire Line
-	7525 1880 7810 1880
-Wire Wire Line
-	7810 1880 7810 1980
-$Comp
-L power:GND #PWR01
-U 1 1 635F44F7
-P 7810 2075
-F 0 "#PWR01" H 7810 1825 50  0001 C CNN
-F 1 "GND" H 7815 1902 50  0000 C CNN
-F 2 "" H 7810 2075 50  0001 C CNN
-F 3 "" H 7810 2075 50  0001 C CNN
-	1    7810 2075
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7525 1980 7810 1980
-Connection ~ 7810 1980
-Wire Wire Line
-	7810 1980 7810 2075
 Text Label 15475 2055 2    50   ~ 0
 ~dtr_ttl
 Text Label 15475 1955 2    50   ~ 0
@@ -1477,25 +1288,6 @@ Text Notes 2340 7640 2    50   ~ 0
 SINCE WE ARE CONNECTED DIRECTLY\nTO THE RS-232 PORT, WITHOUT HAVING\nTO GO THROUGH THE USER PORT\nCONNECTOR, WE HAVE ~CTS~ AVAILABLE.\nLET'S CONNECT IT IN THE PROPER PLACE,\nBUT LET'S ALSO HAVE A JUMPER TO\nGROUND IT LIKE IN THE ORIGINAL +4\nCIRCUIT, JUST IN CASE.
 NoConn ~ 3185 3305
 NoConn ~ 3185 3405
-Text Label 6580 1980 2    50   ~ 0
-bit1
-Text Label 6580 1880 2    50   ~ 0
-bit0
-Wire Wire Line
-	6080 1980 7025 1980
-Wire Wire Line
-	6080 1880 7025 1880
-$Comp
-L Connector_Generic:Conn_02x02_Odd_Even JP1
-U 1 1 635D9F5F
-P 7225 1980
-F 0 "JP1" H 7275 1655 50  0000 C CNN
-F 1 "JMP_ACIA_ADDR" H 7275 1746 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 7225 1980 50  0001 C CNN
-F 3 "~" H 7225 1980 50  0001 C CNN
-	1    7225 1980
-	1    0    0    1   
-$EndComp
 Wire Wire Line
 	3060 6505 3805 6505
 Wire Wire Line
@@ -1609,8 +1401,246 @@ Wire Wire Line
 Wire Wire Line
 	2095 6405 1790 6405
 Connection ~ 2095 6405
+Text Notes 13700 1545 0    50   ~ 0
+TOP
+Text Notes 14830 1545 0    50   ~ 0
+BOTTOM
+Text Notes 5845 3635 0    50   ~ 0
+$FD70
+Text Notes 5845 3810 0    50   ~ 0
+$FD60-FD63\n(CONFIGURABLE WITH JP1)
+Text Notes 5835 4225 0    50   ~ 0
+THESE ADDRESSES ARE THE SAME\nAS SOLDER'S "SPOILER" FOR THE\nSIMILAR PROJECT HE WAS WORKING\nON AND APPARENTLY NEVER COMPLETED
+Wire Wire Line
+	7285 2845 7285 2745
+Wire Wire Line
+	7285 3145 7285 3240
+$Comp
+L power:+5V #PWR0106
+U 1 1 646BD3D1
+P 7285 2745
+F 0 "#PWR0106" H 7285 2595 50  0001 C CNN
+F 1 "+5V" H 7300 2918 50  0000 C CNN
+F 2 "" H 7285 2745 50  0001 C CNN
+F 3 "" H 7285 2745 50  0001 C CNN
+	1    7285 2745
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 646BD3D8
+P 7285 2995
+F 0 "C1" H 7400 3041 50  0000 L CNN
+F 1 "100n" H 7400 2950 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D7.0mm_W2.5mm_P5.00mm" H 7323 2845 50  0001 C CNN
+F 3 "~" H 7285 2995 50  0001 C CNN
+F 4 "810-FG28X7R1H104KNT0" H 7285 2995 50  0001 C CNN "MouserPN"
+	1    7285 2995
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 646BD3DE
+P 7285 3240
+F 0 "#PWR0107" H 7285 2990 50  0001 C CNN
+F 1 "GND" H 7290 3067 50  0000 C CNN
+F 2 "" H 7285 3240 50  0001 C CNN
+F 3 "" H 7285 3240 50  0001 C CNN
+	1    7285 3240
+	1    0    0    -1  
+$EndComp
+$Comp
+L Logic_Programmable:PAL20L8 U1
+U 1 1 6380AE65
+P 6520 2370
+F 0 "U1" H 6740 3175 50  0000 C CNN
+F 1 "GAL20V8" H 6740 1660 50  0000 C CNN
+F 2 "Package_DIP:DIP-24_W7.62mm_Socket_LongPads" H 6520 2370 50  0001 C CNN
+F 3 "" H 6520 2370 50  0001 C CNN
+	1    6520 2370
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6520 3170 6520 3245
+$Comp
+L power:GND #PWR0108
+U 1 1 6380C937
+P 6520 3245
+F 0 "#PWR0108" H 6520 2995 50  0001 C CNN
+F 1 "GND" H 6525 3072 50  0000 C CNN
+F 2 "" H 6520 3245 50  0001 C CNN
+F 3 "" H 6520 3245 50  0001 C CNN
+	1    6520 3245
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6520 1470 6520 1360
+$Comp
+L power:+5V #PWR0109
+U 1 1 638263B0
+P 6520 1360
+F 0 "#PWR0109" H 6520 1210 50  0001 C CNN
+F 1 "+5V" H 6535 1533 50  0000 C CNN
+F 2 "" H 6520 1360 50  0001 C CNN
+F 3 "" H 6520 1360 50  0001 C CNN
+	1    6520 1360
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6020 2470 5520 2470
+Wire Wire Line
+	6020 2370 5520 2370
+Wire Wire Line
+	6020 2270 5520 2270
+Wire Wire Line
+	6020 2170 5520 2170
+Wire Wire Line
+	6020 2070 5520 2070
+Wire Wire Line
+	6020 1970 5520 1970
+Wire Wire Line
+	6020 1870 5520 1870
+Wire Wire Line
+	6020 1770 5520 1770
+Wire Wire Line
+	6020 1670 5520 1670
+Entry Wire Line
+	5420 2370 5520 2470
+Entry Wire Line
+	5420 2270 5520 2370
+Entry Wire Line
+	5420 2170 5520 2270
+Entry Wire Line
+	5420 2070 5520 2170
+Entry Wire Line
+	5420 1970 5520 2070
+Entry Wire Line
+	5420 1870 5520 1970
+Entry Wire Line
+	5420 1770 5520 1870
+Entry Wire Line
+	5420 1670 5520 1770
+Entry Wire Line
+	5420 1570 5520 1670
+Text Label 5520 2470 0    50   ~ 0
+a7
+Text Label 5520 2370 0    50   ~ 0
+a8
+Text Label 5520 2270 0    50   ~ 0
+a9
+Text Label 5520 2170 0    50   ~ 0
+a10
+Text Label 5520 2070 0    50   ~ 0
+a11
+Text Label 5520 1970 0    50   ~ 0
+a12
+Text Label 5520 1870 0    50   ~ 0
+a13
+Text Label 5520 1770 0    50   ~ 0
+a14
+Text Label 5520 1670 0    50   ~ 0
+a15
+Wire Wire Line
+	6020 2670 5520 2670
+Wire Wire Line
+	6020 2570 5520 2570
+Entry Wire Line
+	5420 2570 5520 2670
+Entry Wire Line
+	5420 2470 5520 2570
+Text Label 5520 2670 0    50   ~ 0
+a5
+Text Label 5520 2570 0    50   ~ 0
+a6
+Wire Wire Line
+	6020 2770 5520 2770
+Entry Wire Line
+	5420 2670 5520 2770
+Text Label 5520 2770 0    50   ~ 0
+a4
+Wire Wire Line
+	6020 2970 5520 2970
+Text Label 5520 2970 0    50   ~ 0
+phi2
+Wire Wire Line
+	7520 2370 7020 2370
+Wire Wire Line
+	7520 2270 7020 2270
+Text Label 7520 2270 2    50   ~ 0
+~cs_par
+Text Label 7520 2370 2    50   ~ 0
+~cs_ser
+Wire Wire Line
+	7020 1670 7520 1670
+Wire Wire Line
+	7020 1770 7520 1770
+Wire Wire Line
+	7020 1870 7520 1870
+Wire Wire Line
+	7020 1970 7520 1970
+Wire Wire Line
+	7020 2070 7520 2070
+Wire Wire Line
+	7020 2170 7520 2170
+Text Label 7520 1670 2    50   ~ 0
+gab
+Text Label 7520 1770 2    50   ~ 0
+cba
+Text Label 7520 1970 2    50   ~ 0
+r_~w
+Text Label 7520 2170 2    50   ~ 0
+cst_motor
+Text Label 7520 2070 2    50   ~ 0
+cst_sense_in
+Text Label 7520 1870 2    50   ~ 0
+cst_sense_out
+$Comp
+L Connector:Conn_01x03_Male JP1
+U 1 1 63A6BB80
+P 4970 2870
+F 0 "JP1" H 4943 2802 50  0000 R CNN
+F 1 "JMP_ADDRESS" H 4943 2893 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 4970 2870 50  0001 C CNN
+F 3 "~" H 4970 2870 50  0001 C CNN
+	1    4970 2870
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	5170 2870 6020 2870
+Wire Wire Line
+	5170 2770 5280 2770
+Wire Wire Line
+	5170 2970 5280 2970
+Wire Wire Line
+	5280 2970 5280 3045
+$Comp
+L power:GND #PWR0124
+U 1 1 63AF3EDD
+P 5280 3045
+F 0 "#PWR0124" H 5280 2795 50  0001 C CNN
+F 1 "GND" H 5285 2872 50  0000 C CNN
+F 2 "" H 5280 3045 50  0001 C CNN
+F 3 "" H 5280 3045 50  0001 C CNN
+	1    5280 3045
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5280 2690 5280 2770
+$Comp
+L power:+5V #PWR0125
+U 1 1 63B0F986
+P 5280 2690
+F 0 "#PWR0125" H 5280 2540 50  0001 C CNN
+F 1 "+5V" H 5295 2863 50  0000 C CNN
+F 2 "" H 5280 2690 50  0001 C CNN
+F 3 "" H 5280 2690 50  0001 C CNN
+	1    5280 2690
+	1    0    0    -1  
+$EndComp
+Text Label 4920 1570 0    50   ~ 0
+address_bus
 Wire Bus Line
-	6680 1425 6680 2280
+	5415 1570 4920 1570
 Wire Bus Line
 	15685 1855 15685 3385
 Wire Bus Line
@@ -1624,11 +1654,9 @@ Wire Bus Line
 Wire Bus Line
 	5680 6205 5680 6905
 Wire Bus Line
-	4480 1425 4480 2380
-Wire Bus Line
 	3630 2205 3630 3705
-Text Notes 13700 1545 0    50   ~ 0
-TOP
-Text Notes 14830 1545 0    50   ~ 0
-BOTTOM
+Wire Bus Line
+	5420 1565 5420 2670
+Text Notes 6580 3200 0    50   ~ 0
+OR GAL22V16
 $EndSCHEMATC
