@@ -1627,4 +1627,8 @@ Wire Bus Line
 	4480 1425 4480 2380
 Wire Bus Line
 	3630 2205 3630 3705
+Text Notes 13700 1545 0    50   ~ 0
+TOP
+Text Notes 14830 1545 0    50   ~ 0
+BOTTOM
 $EndSCHEMATC
