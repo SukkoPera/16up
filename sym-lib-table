@@ -5,4 +5,5 @@
   (lib (name MOS_6529)(type Legacy)(uri ${KIPRJMOD}/libs/MOS_6529.lib)(options "")(descr ""))
   (lib (name PLUS4_USERPORT)(type Legacy)(uri ${KIPRJMOD}/libs/PLUS4_USERPORT.lib)(options "")(descr ""))
   (lib (name MAX238)(type Legacy)(uri ${KIPRJMOD}/libs/MAX238.lib)(options "")(descr ""))
+  (lib (name 74LS652)(type Legacy)(uri ${KIPRJMOD}/libs/74LS652.lib)(options "")(descr ""))
 )
