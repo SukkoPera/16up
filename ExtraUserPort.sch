@@ -1691,6 +1691,141 @@ F 3 "" H 10805 3735 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	9165 5060 9020 5060
+Connection ~ 9020 5060
+Wire Wire Line
+	9020 5060 9020 5375
+Wire Wire Line
+	9165 4160 7840 4160
+Wire Wire Line
+	10665 4060 11030 4060
+Text Label 7840 4160 0    50   ~ 0
+gab
+Text Label 11030 4060 2    50   ~ 0
+cba
+Wire Wire Line
+	10805 3960 10805 4160
+Wire Wire Line
+	10805 4160 10665 4160
+Connection ~ 10805 3960
+Wire Wire Line
+	10665 4260 10805 4260
+$Comp
+L power:GND #PWR0129
+U 1 1 63E509B2
+P 10805 5375
+F 0 "#PWR0129" H 10805 5125 50  0001 C CNN
+F 1 "GND" H 10810 5202 50  0000 C CNN
+F 2 "" H 10805 5375 50  0001 C CNN
+F 3 "" H 10805 5375 50  0001 C CNN
+	1    10805 5375
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10805 4260 10805 5375
+Wire Wire Line
+	9165 4260 8425 4260
+Wire Wire Line
+	9165 4360 8730 4360
+Wire Wire Line
+	9165 4460 8425 4460
+Wire Wire Line
+	9165 4560 8730 4560
+Wire Wire Line
+	9165 4660 8420 4660
+Wire Wire Line
+	9165 4760 8730 4760
+Wire Wire Line
+	9165 4860 8420 4860
+Wire Wire Line
+	9165 4960 8730 4960
+Entry Wire Line
+	7840 4360 7940 4260
+Entry Wire Line
+	7840 4460 7940 4360
+Entry Wire Line
+	7840 4560 7940 4460
+Entry Wire Line
+	7840 4660 7940 4560
+Entry Wire Line
+	7840 4760 7940 4660
+Entry Wire Line
+	7840 4860 7940 4760
+Entry Wire Line
+	7840 4960 7940 4860
+Entry Wire Line
+	7840 5060 7940 4960
+Wire Bus Line
+	7840 5060 7305 5060
+Text Label 7305 5060 0    50   ~ 0
+parallel_port
+Text Label 7940 4260 0    50   ~ 0
+p0
+Text Label 7940 4360 0    50   ~ 0
+p1
+Text Label 7940 4460 0    50   ~ 0
+p2
+Text Label 7940 4560 0    50   ~ 0
+p3
+Text Label 7940 4660 0    50   ~ 0
+p4
+Text Label 7940 4760 0    50   ~ 0
+p5
+Text Label 7940 4860 0    50   ~ 0
+p6
+Text Label 7940 4960 0    50   ~ 0
+p7
+Wire Wire Line
+	10665 4360 10940 4360
+Wire Wire Line
+	10665 4460 10940 4460
+Wire Wire Line
+	10665 4560 10940 4560
+Wire Wire Line
+	10665 4660 10940 4660
+Wire Wire Line
+	10665 4760 10940 4760
+Wire Wire Line
+	10665 4860 10940 4860
+Wire Wire Line
+	10665 4960 10940 4960
+Wire Wire Line
+	10665 5060 10940 5060
+Entry Wire Line
+	11040 4460 10940 4360
+Entry Wire Line
+	11040 4560 10940 4460
+Entry Wire Line
+	11040 4660 10940 4560
+Entry Wire Line
+	11040 4760 10940 4660
+Entry Wire Line
+	11040 4860 10940 4760
+Entry Wire Line
+	11040 4960 10940 4860
+Entry Wire Line
+	11040 5060 10940 4960
+Entry Wire Line
+	11040 5160 10940 5060
+Wire Bus Line
+	11040 5160 11450 5160
+Text Label 11450 5160 2    50   ~ 0
+data_bus
+Text Label 10940 4360 2    50   ~ 0
+d0
+Text Label 10940 4460 2    50   ~ 0
+d1
+Text Label 10940 4560 2    50   ~ 0
+d2
+Text Label 10940 4660 2    50   ~ 0
+d3
+Text Label 10940 4760 2    50   ~ 0
+d4
+Text Label 10940 4860 2    50   ~ 0
+d5
+Text Label 10940 4960 2    50   ~ 0
+d6
+Text Label 10940 5060 2    50   ~ 0
+d7
 Wire Bus Line
 	15685 1855 15685 3385
 Wire Bus Line
@@ -1704,10 +1839,115 @@ Wire Bus Line
 Wire Bus Line
 	5680 6205 5680 6905
 Wire Bus Line
+	7840 4360 7840 5060
+Wire Bus Line
+	11040 4460 11040 5160
+Wire Bus Line
 	3630 2205 3630 3705
 Wire Bus Line
 	5420 1565 5420 2670
-Connection ~ 9020 5060
+$Comp
+L Device:D D?
+U 1 1 63ECF378
+P 8275 4260
+F 0 "D?" H 8275 4477 50  0000 C CNN
+F 1 "D" H 8275 4386 50  0000 C CNN
+F 2 "" H 8275 4260 50  0001 C CNN
+F 3 "~" H 8275 4260 50  0001 C CNN
+	1    8275 4260
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	9020 5060 9020 5375
+	8125 4260 7940 4260
+$Comp
+L Device:D D?
+U 1 1 63ECFC63
+P 8580 4360
+F 0 "D?" H 8580 4577 50  0000 C CNN
+F 1 "D" H 8580 4486 50  0000 C CNN
+F 2 "" H 8580 4360 50  0001 C CNN
+F 3 "~" H 8580 4360 50  0001 C CNN
+	1    8580 4360
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8430 4360 7940 4360
+$Comp
+L Device:D D?
+U 1 1 63ED0FEE
+P 8275 4460
+F 0 "D?" H 8275 4677 50  0000 C CNN
+F 1 "D" H 8275 4586 50  0000 C CNN
+F 2 "" H 8275 4460 50  0001 C CNN
+F 3 "~" H 8275 4460 50  0001 C CNN
+	1    8275 4460
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8125 4460 7940 4460
+$Comp
+L Device:D D?
+U 1 1 63ED1611
+P 8270 4660
+F 0 "D?" H 8270 4877 50  0000 C CNN
+F 1 "D" H 8270 4786 50  0000 C CNN
+F 2 "" H 8270 4660 50  0001 C CNN
+F 3 "~" H 8270 4660 50  0001 C CNN
+	1    8270 4660
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8120 4660 7940 4660
+$Comp
+L Device:D D?
+U 1 1 63ED1C7A
+P 8270 4860
+F 0 "D?" H 8270 5077 50  0000 C CNN
+F 1 "D" H 8270 4986 50  0000 C CNN
+F 2 "" H 8270 4860 50  0001 C CNN
+F 3 "~" H 8270 4860 50  0001 C CNN
+	1    8270 4860
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8120 4860 7940 4860
+$Comp
+L Device:D D?
+U 1 1 63ED2270
+P 8580 4560
+F 0 "D?" H 8580 4777 50  0000 C CNN
+F 1 "D" H 8580 4686 50  0000 C CNN
+F 2 "" H 8580 4560 50  0001 C CNN
+F 3 "~" H 8580 4560 50  0001 C CNN
+	1    8580 4560
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8430 4560 7940 4560
+$Comp
+L Device:D D?
+U 1 1 63ED2726
+P 8580 4760
+F 0 "D?" H 8580 4977 50  0000 C CNN
+F 1 "D" H 8580 4886 50  0000 C CNN
+F 2 "" H 8580 4760 50  0001 C CNN
+F 3 "~" H 8580 4760 50  0001 C CNN
+	1    8580 4760
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8430 4760 7940 4760
+$Comp
+L Device:D D?
+U 1 1 63ED2E3E
+P 8580 4960
+F 0 "D?" H 8580 5177 50  0000 C CNN
+F 1 "D" H 8580 5086 50  0000 C CNN
+F 2 "" H 8580 4960 50  0001 C CNN
+F 3 "~" H 8580 4960 50  0001 C CNN
+	1    8580 4960
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8430 4960 7940 4960
 $EndSCHEMATC
