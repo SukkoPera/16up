@@ -5,7 +5,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 1
 Title "ExtraUserPort"
-Date "2022-09-10"
+Date "2022-09-12"
 Rev "1git"
 Comp "SukkoPera & The Folks From The Plus/4 World Forum"
 Comment1 "Licensed under CC BY-NC-SA 4.0"
@@ -1519,25 +1519,13 @@ Wire Wire Line
 Wire Wire Line
 	7050 1655 7550 1655
 Wire Wire Line
-	7050 1755 7550 1755
-Wire Wire Line
 	7050 1855 7550 1855
-Wire Wire Line
-	7050 1955 7550 1955
-Wire Wire Line
-	7050 2055 7550 2055
 Text Label 7550 1555 2    50   ~ 0
 gab
 Text Label 7550 1655 2    50   ~ 0
 cba
 Text Label 7550 1855 2    50   ~ 0
 r_~w
-Text Label 7550 2055 2    50   ~ 0
-cst_motor
-Text Label 7550 1955 2    50   ~ 0
-cst_sense_in
-Text Label 7550 1755 2    50   ~ 0
-cst_sense_out
 $Comp
 L Connector:Conn_01x03_Male JP1
 U 1 1 63A6BB80
@@ -2087,6 +2075,82 @@ Wire Wire Line
 	12065 4640 12725 4640
 Wire Wire Line
 	11965 4320 11965 4540
+Connection ~ 11965 4540
+Wire Wire Line
+	11965 4540 12725 4540
+$Comp
+L mini-din-8:Mini-DIN-8 J2
+U 1 1 63742584
+P 5790 10060
+F 0 "J2" H 6040 9780 50  0000 C CNN
+F 1 "TAPE_IN" H 6040 9685 50  0000 C CNN
+F 2 "ExtraUserPort:Connector_Mini-DIN_Female_8Pin_2rows" V 5780 10050 50  0001 C CNN
+F 3 "http://service.powerdynamics.com/ec/Catalog17/Section%2011.pdf" V 5780 10050 50  0001 C CNN
+	1    5790 10060
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5490 9960 5350 9960
+Wire Wire Line
+	5350 9960 5350 10485
+$Comp
+L power:GND #PWR04
+U 1 1 6376DC4F
+P 5790 10580
+F 0 "#PWR04" H 5790 10330 50  0001 C CNN
+F 1 "GND" H 5795 10407 50  0000 C CNN
+F 2 "" H 5790 10580 50  0001 C CNN
+F 3 "" H 5790 10580 50  0001 C CNN
+	1    5790 10580
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5790 10360 5790 10485
+Wire Wire Line
+	5790 10485 5350 10485
+Wire Wire Line
+	5790 10485 5790 10580
+Connection ~ 5790 10485
+NoConn ~ 6090 10260
+NoConn ~ 6090 10160
+NoConn ~ 6090 10060
+NoConn ~ 6090 9960
+NoConn ~ 5490 10060
+NoConn ~ 5490 10160
+Wire Wire Line
+	5790 9760 5790 9675
+Wire Wire Line
+	5790 9675 6465 9675
+NoConn ~ 7050 1755
+NoConn ~ 7050 1955
+NoConn ~ 7050 2055
+Text Label 6420 9675 2    50   ~ 0
+~cassette_sense
+$Comp
+L Device:Jumper_NC_Small JP4
+U 1 1 6398A408
+P 6565 9675
+F 0 "JP4" H 6565 9887 50  0000 C CNN
+F 1 "JMP_CASS_SENSE" H 6565 9796 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 6565 9675 50  0001 C CNN
+F 3 "~" H 6565 9675 50  0001 C CNN
+	1    6565 9675
+	1    0    0    -1  
+$EndComp
+Entry Wire Line
+	7030 9775 6930 9675
+Wire Bus Line
+	7030 9775 7665 9775
+Text Label 7665 9775 2    50   ~ 0
+oc_parallel_port
+Text Label 6930 9675 2    50   ~ 0
+pc2
+Wire Wire Line
+	6665 9675 6930 9675
+Wire Bus Line
+	7030 9770 7030 9775
+Text Notes 6290 9345 0    50   ~ 0
+CASSETTE SENSE
 Wire Bus Line
 	15640 1415 15640 2945
 Wire Bus Line
@@ -2111,7 +2175,4 @@ Wire Bus Line
 	3630 2205 3630 3705
 Wire Bus Line
 	5450 1450 5450 2555
-Connection ~ 11965 4540
-Wire Wire Line
-	11965 4540 12725 4540
 $EndSCHEMATC
