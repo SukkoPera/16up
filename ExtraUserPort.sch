@@ -1765,8 +1765,6 @@ F 3 "~" H 11140 4640 50  0001 C CNN
 	1    11140 4640
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	11290 4640 12265 4640
 $Comp
 L Device:D D3
 U 1 1 63ED0FEE
@@ -1778,8 +1776,6 @@ F 3 "~" H 11445 4740 50  0001 C CNN
 	1    11445 4740
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	11595 4740 12165 4740
 $Comp
 L Device:D D4
 U 1 1 63ED2270
@@ -1791,8 +1787,6 @@ F 3 "~" H 11140 4840 50  0001 C CNN
 	1    11140 4840
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	11290 4840 12065 4840
 $Comp
 L Device:D D6
 U 1 1 63ED2726
@@ -1844,31 +1838,6 @@ F 3 "" H 12365 3840 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	12365 4320 12365 4540
-Connection ~ 12365 4540
-Wire Wire Line
-	12365 4540 12725 4540
-Wire Wire Line
-	12265 4320 12265 4640
-Connection ~ 12265 4640
-Wire Wire Line
-	12265 4640 12725 4640
-Wire Wire Line
-	12165 4320 12165 4740
-Connection ~ 12165 4740
-Wire Wire Line
-	12165 4740 12725 4740
-Wire Wire Line
-	12065 4320 12065 4840
-Connection ~ 12065 4840
-Wire Wire Line
-	12065 4840 12725 4840
-Wire Wire Line
-	11965 4320 11965 4940
-Connection ~ 11965 4940
-Wire Wire Line
-	11965 4940 12725 4940
-Wire Wire Line
 	11865 4320 11865 5040
 Connection ~ 11865 5040
 Wire Wire Line
@@ -1885,8 +1854,6 @@ Wire Wire Line
 	11665 5240 12725 5240
 Text Notes 8430 3735 0    50   ~ 0
 MOS 6529 REPLACEMENT CIRCUIT\nBY DANIEL MANTIONE
-Wire Wire Line
-	11595 4540 12365 4540
 $Comp
 L Device:D D1
 U 1 1 63ECF378
@@ -1911,8 +1878,6 @@ F 3 "~" H 11445 5140 50  0001 C CNN
 	1    11445 5140
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	11595 4940 11965 4940
 $Comp
 L Device:D D5
 U 1 1 63ED1611
@@ -2090,6 +2055,38 @@ Wire Wire Line
 	10715 4940 11295 4940
 Wire Wire Line
 	10715 5140 11295 5140
+Wire Wire Line
+	11595 4540 11965 4540
+Wire Wire Line
+	11290 4640 12065 4640
+Wire Wire Line
+	11595 4740 12165 4740
+Wire Wire Line
+	11290 4840 12265 4840
+Wire Wire Line
+	11595 4940 12365 4940
+Wire Wire Line
+	12365 4320 12365 4940
+Connection ~ 12365 4940
+Wire Wire Line
+	12365 4940 12725 4940
+Wire Wire Line
+	12265 4320 12265 4840
+Connection ~ 12265 4840
+Wire Wire Line
+	12265 4840 12725 4840
+Wire Wire Line
+	12165 4320 12165 4740
+Connection ~ 12165 4740
+Wire Wire Line
+	12165 4740 12725 4740
+Wire Wire Line
+	12065 4320 12065 4640
+Connection ~ 12065 4640
+Wire Wire Line
+	12065 4640 12725 4640
+Wire Wire Line
+	11965 4320 11965 4540
 Wire Bus Line
 	15640 1415 15640 2945
 Wire Bus Line
@@ -2114,4 +2111,7 @@ Wire Bus Line
 	3630 2205 3630 3705
 Wire Bus Line
 	5450 1450 5450 2555
+Connection ~ 11965 4540
+Wire Wire Line
+	11965 4540 12725 4540
 $EndSCHEMATC
