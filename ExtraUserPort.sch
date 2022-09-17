@@ -5,7 +5,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 1
 Title "ExtraUserPort"
-Date "2022-09-12"
+Date "2022-09-17"
 Rev "1git"
 Comp "SukkoPera & The Folks From The Plus/4 World Forum"
 Comment1 "Licensed under CC BY-NC-SA 4.0"
@@ -908,16 +908,16 @@ Wire Wire Line
 Wire Wire Line
 	8875 7600 8875 7705
 Wire Wire Line
-	8875 7705 8525 7705
+	8875 7705 8770 7705
 Entry Wire Line
-	8525 7705 8425 7805
-Text Label 8525 7705 0    50   ~ 0
+	8285 7705 8185 7805
+Text Label 8285 7705 0    50   ~ 0
 pc1
 Wire Bus Line
-	8425 7805 7795 7805
-Text Label 7795 7805 0    50   ~ 0
+	8185 7805 7555 7805
+Text Label 7555 7805 0    50   ~ 0
 oc_parallel_port
-Text Notes 9025 8550 2    50   ~ 0
+Text Notes 8955 8690 2    50   ~ 0
 +4 HAS NO DEDICATED ~CTS~ PIN.\nIT SEEMS THE SIGNAL WAS PLANNED\nTO BE CONNECTED TO D1, WHICH IS\nON PIN K ON THE USERPORT CONNECTOR,\nEXACTLY WHERE IT WOULD BE ON THE\nC64, THUS SOFTWARE SHOULD HAVE BEEN\nABLE TO POLL THAT PIN AND APPLY\nSOFTWARE FLOW CONTROL, I GUESS.
 Wire Wire Line
 	3885 6495 3140 6495
@@ -2119,38 +2119,73 @@ NoConn ~ 5490 10060
 NoConn ~ 5490 10160
 Wire Wire Line
 	5790 9760 5790 9675
-Wire Wire Line
-	5790 9675 6465 9675
 NoConn ~ 7050 1755
 NoConn ~ 7050 1955
 NoConn ~ 7050 2055
 Text Label 6420 9675 2    50   ~ 0
 ~cassette_sense
-$Comp
-L Device:Jumper_NC_Small JP4
-U 1 1 6398A408
-P 6565 9675
-F 0 "JP4" H 6565 9887 50  0000 C CNN
-F 1 "JMP_CASS_SENSE" H 6565 9796 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 6565 9675 50  0001 C CNN
-F 3 "~" H 6565 9675 50  0001 C CNN
-	1    6565 9675
-	1    0    0    -1  
-$EndComp
 Entry Wire Line
-	7030 9775 6930 9675
+	7140 9775 7040 9675
 Wire Bus Line
-	7030 9775 7665 9775
-Text Label 7665 9775 2    50   ~ 0
+	7140 9775 7775 9775
+Text Label 7775 9775 2    50   ~ 0
 oc_parallel_port
-Text Label 6930 9675 2    50   ~ 0
+Text Label 7040 9675 2    50   ~ 0
 pc2
-Wire Wire Line
-	6665 9675 6930 9675
 Wire Bus Line
-	7030 9770 7030 9775
+	7140 9770 7140 9775
 Text Notes 6290 9345 0    50   ~ 0
 CASSETTE SENSE
+$Comp
+L Device:R R5
+U 1 1 641850A0
+P 8620 7705
+F 0 "R5" V 8735 7705 50  0000 C CNN
+F 1 "1k" V 8826 7705 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 8550 7705 50  0001 C CNN
+F 3 "~" H 8620 7705 50  0001 C CNN
+	1    8620 7705
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8470 7705 8285 7705
+$Comp
+L Device:R R4
+U 1 1 641AD24B
+P 6715 9675
+F 0 "R4" V 6830 9675 50  0000 C CNN
+F 1 "1k" V 6921 9675 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 6645 9675 50  0001 C CNN
+F 3 "~" H 6715 9675 50  0001 C CNN
+	1    6715 9675
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6865 9675 7040 9675
+$Comp
+L void:Void V0
+U 1 1 64272105
+P 11000 11025
+F 0 "V0" H 11078 11071 50  0000 L CNN
+F 1 "LOGO" H 11078 10980 50  0000 L CNN
+F 2 "ExtraUserPort:logo" H 11000 11025 50  0001 C CNN
+F 3 "" H 11000 11025 50  0001 C CNN
+	1    11000 11025
+	1    0    0    -1  
+$EndComp
+$Comp
+L void:Void V1
+U 1 1 64272908
+P 11000 10800
+F 0 "V1" H 11078 10846 50  0000 L CNN
+F 1 "CC-BY-NC-SA" H 11078 10755 50  0000 L CNN
+F 2 "ExtraUserPort:cc_by_nc_sa" H 11000 10800 50  0001 C CNN
+F 3 "" H 11000 10800 50  0001 C CNN
+	1    11000 10800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5790 9675 6565 9675
 Wire Bus Line
 	15640 1415 15640 2945
 Wire Bus Line
