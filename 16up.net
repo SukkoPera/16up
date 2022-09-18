@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/sukko/Documents/kicad/16up/16up.sch)
-    (date "Sat 17 Sep 2022 14:44:23 CEST")
+    (date "Sun 18 Sep 2022 17:29:55 CEST")
     (tool "Eeschema 5.1.12")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -24,7 +24,7 @@
       (tstamp 64674547))
     (comp (ref CN2)
       (value ALMOST_USERPORT)
-      (footprint 16up:24Pin_Edge)
+      (footprint 16up:Plus4_UserPort)
       (datasheet DOCUMENTATION)
       (libsource (lib PLUS4_USERPORT) (part PLUS4_USERPORT) (description ""))
       (sheetpath (names /) (tstamps /))
