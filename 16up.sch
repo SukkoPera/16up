@@ -1963,17 +1963,6 @@ Wire Wire Line
 Connection ~ 11965 4540
 Wire Wire Line
 	11965 4540 12725 4540
-$Comp
-L mini-din-8:Mini-DIN-8 CN4
-U 1 1 63742584
-P 5790 10060
-F 0 "CN4" H 6040 9780 50  0000 C CNN
-F 1 "TAPE_IN" H 6040 9685 50  0000 C CNN
-F 2 "16up:Connector_Mini-DIN_Female_8Pin_2rows" V 5780 10050 50  0001 C CNN
-F 3 "http://service.powerdynamics.com/ec/Catalog17/Section%2011.pdf" V 5780 10050 50  0001 C CNN
-	1    5790 10060
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5490 9960 5350 9960
 Wire Wire Line
@@ -1996,7 +1985,6 @@ Wire Wire Line
 Wire Wire Line
 	5790 10485 5790 10580
 Connection ~ 5790 10485
-NoConn ~ 6090 10260
 NoConn ~ 6090 10160
 NoConn ~ 6090 10060
 NoConn ~ 6090 9960
@@ -2211,4 +2199,15 @@ Wire Bus Line
 	3630 2205 3630 3705
 Wire Bus Line
 	5500 1470 5500 2575
+$Comp
+L mini-din-7:Mini-DIN-7 CN4
+U 1 1 63BBDF9F
+P 5790 10060
+F 0 "CN4" H 6070 9825 50  0000 C CNN
+F 1 "TAPE_IN" H 6075 9735 50  0000 C CNN
+F 2 "16up:KMDGX-7S-BS" V 5780 10050 50  0001 C CNN
+F 3 "" V 5780 10050 50  0001 C CNN
+	1    5790 10060
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
