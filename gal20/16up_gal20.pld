@@ -57,6 +57,8 @@ Pin 23 = phi2;
 
 Pin 19 = rw;
 
+Pin 18 = ctsIn;				// /CTS (active-low)
+
 Pin 14 = intExt;			// Configuration: 0 => Internal, 1 => External
 
 
@@ -64,12 +66,12 @@ Pin 14 = intExt;			// Configuration: 0 => Internal, 1 => External
 Pin 15 = aciaCs;			// ACIA Enable (Active-low)
 Pin 16 = mos6529Cs;			// 6529 Enable (Active-low)
 
+Pin 17 = ctsOut;			// CTS (active-high)
+
 Pin 21 = cba;				// 74LS652 B-A clock
 Pin 22 = gab;				// 74LS652 A-B enable
 
 /** Spares **/
-//Pin 17 = 
-//Pin 18 = 
 //Pin 20 = 
 
 
@@ -85,6 +87,11 @@ mos6529Cs = !(phi2 & ((!intExt & intRange6529) # (intExt & extRange6529)));
 intRangeAcia = addr:FD0x;
 extRangeAcia = addr:FD6x;
 aciaCs = !(phi2 & ((!intExt & intRangeAcia) # (intExt & extRangeAcia)));
+
+
+/*** /CTS ***/
+ctsOut = !ctsIn;
+
 
 /*** SIGNALS FOR MOS 6529 REPLACEMENT BASED ON 74LS652/4 ***/
 /* These are derived from work by Daniel Mantione, thanks! */
