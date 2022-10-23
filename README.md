@@ -2,7 +2,7 @@
 # 16UP
 16UP is an Open Hardware Expansion board for the Commodore 16.
 
-![Board](https://raw.githubusercontent.com/SukkoPera/16up/master/doc/render-top.png)
+![Board](https://raw.githubusercontent.com/SukkoPera/16up/master/img/render-top.png)
 
 ## Summary
 The biggest difference between the Commodore 16 and the Plus/4, besides the different amount of RAM installed, is that the former lacks a User Port. In the past there were numerous attempts at making a cartridge for the Expansion Port that would fill this gap, but apparently none of them succeeded...
@@ -82,7 +82,7 @@ This documentation is distributed *as is* and WITHOUT ANY EXPRESS OR IMPLIED WAR
 ## Thanks
 Inspiration for this board came from an uncompleted [project by Solder/Synergy](http://solder-synergy.de/plus4/hardware/index.html).
 
-Other people from the Plus/4 World Forum helped, in particular:
+Other people from the [Plus/4 World Forum](https://plus4world.powweb.com/forum) helped, in particular:
 * Daniel Mantione  for the [74LS652/4-based replacement circuit for the MOS 6529](https://www.sellmyretro.com/offer/details/mos-6529-spi-full-equivalent--_-soldering-kit-43923).
 * TLC (Levente Hársfalvi) for lots of information about the serial port.
 * MCes for helping fine-tuning of the C16 modification.
