@@ -1,11 +1,11 @@
 
 # 16UP
-16UP is an Open Hardware Expansion board for the Commodore 16.
+16UP is an Open Hardware Expansion board that will add a User Port to the Commodore 16, 116 and Plus/4 home computers.
 
 ![Board](https://raw.githubusercontent.com/SukkoPera/16up/master/img/render-top.png)
 
 ## Summary
-The biggest difference between the Commodore 16 and the Plus/4, besides the different amount of RAM installed, is that the former lacks a User Port. In the past there were numerous attempts at making a cartridge for the Expansion Port that would fill this gap, but apparently none of them succeeded...
+The biggest difference between the Commodore 16/116 and the Plus/4, besides the different amount of RAM installed, is that the former lacks a User Port. In the past there were numerous attempts at making a cartridge for the Expansion Port that would fill this gap, but apparently none of them succeeded...
 
 ... None of them except this project, of course! :) 16UP will plug into the Expansion Port and "convert" it to a User Port that will be mostly compatible with that featured on the Plus/4. It can also be used on a Plus/4 in order to gain an extra User Port.
 
@@ -15,17 +15,17 @@ If you are interested in this board, **please read this document carefully**, th
 16UP can be configured to respond to two different address sets through the *JP1* jumper:
 
 ### External Address
-This configuration will expose the ACIA (Serial port) at address $fd6x and the MOS 6529 (Parallel port) at $fd7x. These addresses are normally unused in both the C16 and +4, thus this setting is the most compatible, but it will need "special" software that either looks for the ports at these addresses or that allows the addresses to be configured manually.
+This configuration will expose the ACIA (Serial port) at address $fd6x and the MOS 6529 (Parallel port) at $fd7x. These addresses are normally unused in both the C16/116 and +4, thus this setting is the most compatible, but it will need "special" software that either looks for the ports at these addresses or that allows the addresses to be configured manually.
 
 On a +4, this configuration will effectively add a second User Port that can be used independently of the built-in one.
 
 ### Internal Address
-This configuration will expose the ACIA and MOS 6529 at the same addresses that are normally used on a +4 ($fd0x for the ACIA and $fd10 for the 6529). Of course this means that it cannot be used on a +4 as the port would conflict with the built-in one. It is rather meant to be used on a C16, making it ALMOST (see below) compatible with all the +4 software that uses the User Port.
+This configuration will expose the ACIA and MOS 6529 at the same addresses that are normally used on a +4 ($fd0x for the ACIA and $fd10 for the 6529). Of course this means that it cannot be used on a +4 as the port would conflict with the built-in one. It is rather meant to be used on a C16/116, making it ALMOST (see below) compatible with all the +4 software that uses the User Port.
 
-**NOTE: Using this board on a C16 requires an internal modification in the machine. While this may sound impractical, it is fairly easy to perform and there are good reasons to perform it even if you are not interested in using this board. Please [see this page](https://github.com/SukkoPera/16up/wiki/Modification) for details.**
+**NOTE: Using this board on a C16/116 requires an internal modification in the machine. While this may sound impractical, it is fairly easy to perform and there are good reasons to perform it even if you are not interested in using this board. Please [see this page](https://github.com/SukkoPera/16up/wiki/Modification) for details.**
 
 ## Caveats
-If you perform the C16 modification, plug 16UP in the Expansion Port and want to use the Datassette, you will notice that the computer will no longer detect when you press Play upon the *Press Play on tape* prompt. This is absolutely normal and is actually a sign that the modification works as intended. If you really want to use the Datassette you can either remove the board from the Expansion Port or make a Y cable with one female and two male MiniDIN-7 connectors: the Datassette will plug into the female connector, while one of the two male ones will plug into the C16 and the other one into the MiniDIN-7 connector on the 16up board.
+If you perform the C16/116 modification, plug 16UP in the Expansion Port and want to use the Datassette, you will notice that the computer will no longer detect when you press Play upon the *Press Play on tape* prompt. This is absolutely normal and is actually a sign that the modification works as intended. If you really want to use the Datassette you can either remove the board from the Expansion Port or make a Y cable with one female and two male MiniDIN-7 connectors: the Datassette will plug into the female connector, while one of the two male ones will plug into the C16/116 and the other one into the MiniDIN-7 connector on the 16up board.
 Hint: if you want to save wire and effort, it is enough to bring the *Sense* signal - Pin 6 - to the connector that plugs into 16UP.
 Another hint: if you use [one of these](https://github.com/SukkoPera/OpenC64TapePortBreakOut) instead of the female connector, you can make an adapter for the C64 (1530) Datassette ;).
 
@@ -54,13 +54,13 @@ If you are looking for a terminal emulator, I recommend [Term-80](https://plus4w
 This is fully functional as on the original +4.
 
 ### /ATTENTION signal
-The /ATTENTION signal is not present on the C16 Expansion Port. Thus, if you need it, you will need to provide the board with it through the */ATTN* (*J1*) connector. The signal is available on pin 3 of the [IEC (Serial) port](doc/iec_serial.png) and it can be connected in parallel to any other device you already have on that port, just break it out.
+The /ATTENTION signal is not present on the C16/116 Expansion Port. Thus, if you need it, you will need to provide the board with it through the */ATTN* (*J1*) connector. The signal is available on pin 3 of the [IEC (Serial) port](doc/iec_serial.png) and it can be connected in parallel to any other device you already have on that port, just break it out.
 
 ### +5VDC power supply
-This is directly connected to the main power rails of the C16. Use common sense and do not draw "too much" power out of it.
+This is directly connected to the main power rails of the C16/116. Use common sense and do not draw "too much" power out of it.
 
 ### 9VAC power supply
-This is not present on the C16 Expansion Port and thus the corresponding pins of the User Port are left unconnected. This should not be a big deal though, as the main use case for this is to provide the higher voltages needed for a fully-compliant RS-232 interface, but 16UP has that built-in and done in a way that does not require an actual higher-voltage supply. Let me know if you find any User Port peripherals that require it.
+This is not present on the C16/116 Expansion Port and thus the corresponding pins of the User Port are left unconnected. This should not be a big deal though, as the main use case for this is to provide the higher voltages needed for a fully-compliant RS-232 interface, but 16UP has that built-in and done in a way that does not require an actual higher-voltage supply. Let me know if you find any User Port peripherals that require it.
 
 ## Assembly
 The parallel port on the +4 is driven through a MOS 6529 (U2 on the board). Since these days that IC is pretty hard to get hold of, an alternative circuit designed by Daniel Mantione has been integrated into the board: it can either use a 74LS652 or 74LS654 to replace that rare IC. Depending on what you choose to use:
