@@ -1,0 +1,116 @@
+CSIM(WM): CUPL Simulation Program
+Version 5.0a Serial# 
+Copyright (c) 1983, 1998 Logical Devices, Inc.
+CREATED Wed Nov 02 14:05:03 2022
+
+LISTING FOR SIMULATION FILE: 16UP_GAL20.si
+
+   1: /* 16up Simulation Input
+   2:  * Copyright 2022 SukkoPera <software@sukkology.net>
+   3:  *
+   4:  * This program is free software: you can redistribute it and/or modify
+   5:  * it under the terms of the GNU General Public License as published by
+   6:  * the Free Software Foundation, either version 3 of the License, or
+   7:  * (at your option) any later version.
+   8:  *
+   9:  * This program is distributed in the hope that it will be useful,
+  10:  * but WITHOUT ANY WARRANTY; without even the implied warranty of
+  11:  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  12:  * GNU General Public License for more details.
+  13:  *
+  14:  * You should have received a copy of the GNU General Public License
+  15:  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  16:  */
+  17: Name     16up_gal20;
+  18: PartNo   TBD;
+  19: Date     17/10/2022;
+  20: Revision 01;
+  21: Designer SukkoPera;
+  22: Company  OpenRetroWorks;
+  23: Assembly None;
+  24: Location Italy;
+  25: Device   g20v8as;
+  26: 
+  27: FIELD addr = [a15,a14,a13,a12,a11,a10,a9,a8,a7,a6,a5,a4];
+  28:
+  29: ORDER: intExt, addr, phi2, mos6529Cs, aciaCs; 
+  30: 
+  31: 
+
+=========================
+                    m    
+                    o    
+                    s    
+      i             6a   
+      n             5c   
+      t            p2i   
+      E            h9a   
+      x            iCC   
+      t    addr    2ss   
+=========================
+0001: 00000000000000HH
+0002: 10000000000000HH
+0003: 01111110100000HH
+0004: 01111110100010HH
+0005: 01111110100100HH
+0006: 01111110100110HH
+0007: 01111110101000HH
+0008: 01111110101010HH
+0009: 01111110101100HH
+0010: 01111110101110HH
+0011: 01111110110000HH
+0012: 01111110110010HH
+0013: 01111110110100HH
+0014: 01111110110110HH
+0015: 01111110111000HH
+0016: 01111110111010HH
+0017: 01111110111100HH
+0018: 01111110111110HH
+0019: 11111110100000HH
+0020: 11111110100010HH
+0021: 11111110100100HH
+0022: 11111110100110HH
+0023: 11111110101000HH
+0024: 11111110101010HH
+0025: 11111110101100HH
+0026: 11111110101110HH
+0027: 11111110110000HH
+0028: 11111110110010HH
+0029: 11111110110100HH
+0030: 11111110110110HH
+0031: 11111110111000HH
+0032: 11111110111010HH
+0033: 11111110111100HH
+0034: 11111110111110HH
+0035: 01111110100001HL
+0036: 01111110100011LH
+0037: 01111110100101HH
+0038: 01111110100111HH
+0039: 01111110101001HH
+0040: 01111110101011HH
+0041: 01111110101101HH
+0042: 01111110101111HH
+0043: 01111110110001HH
+0044: 01111110110011HH
+0045: 01111110110101HH
+0046: 01111110110111HH
+0047: 01111110111001HH
+0048: 01111110111011HH
+0049: 01111110111101HH
+0050: 01111110111111HH
+0051: 11111110100001HH
+0052: 11111110100011HH
+0053: 11111110100101HH
+0054: 11111110100111HH
+0055: 11111110101001HH
+0056: 11111110101011HH
+0057: 11111110101101HL
+0058: 11111110101111LH
+0059: 11111110110001HH
+0060: 11111110110011HH
+0061: 11111110110101HH
+0062: 11111110110111HH
+0063: 11111110111001HH
+0064: 11111110111011HH
+0065: 11111110111101HH
+0066: 11111110111111HH

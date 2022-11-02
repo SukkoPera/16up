@@ -1,8 +1,8 @@
 
 CUPL(WM)        5.0a  Serial# 60008009
 Device          g22v10  Library DLIB-h-40-1
-Created         Fri Oct 21 19:45:25 2022
-Name            16up
+Created         Wed Nov 02 14:05:39 2022
+Name            16up_gal22
 Partno          TBD
 Revision        01
 Date            17/10/2022
@@ -39,4 +39,4 @@ Location        Italy
 *L05792 00000000000000000111110001011101
 *L05824 01010101010001000010010001000000
 *C444F
-*0F02
+*1100

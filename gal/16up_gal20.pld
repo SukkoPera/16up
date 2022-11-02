@@ -1,0 +1,32 @@
+/* 16up GAL20 Equations
+ * Copyright 2022 SukkoPera <software@sukkology.net>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
+Name 16up_gal20;
+Partno TBD;
+Date 17/10/2022;
+Revision 01;
+Designer SukkoPera;
+Company OpenRetroWorks;
+Assembly None;
+Location Italy;
+Device g20v8ma;	// Complex mode, only for using pins 18/19 as inputs
+
+// GAL20V8
+// Inputs: 1-11, 13, 14, 23
+// Inputs/Outputs: 15-22 (18 and 19 have no fb path in simple mode, 15 and 22 do not in complex mode)
+
+$INCLUDE 16up_main.inc

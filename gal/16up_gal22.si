@@ -1,20 +1,20 @@
-/* ExtraUserPort Simulation Input
-* Copyright 2022 SukkoPera <software@sukkology.net>
-*
-* This program is free software: you can redistribute it and/or modify
-* it under the terms of the GNU General Public License as published by
-* the Free Software Foundation, either version 3 of the License, or
-* (at your option) any later version.
-*
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-* GNU General Public License for more details.
-*
-* You should have received a copy of the GNU General Public License
-* along with this program.  If not, see <https://www.gnu.org/licenses/>.
-*/
-Name     16up;
+/* 16up Simulation Input
+ * Copyright 2022 SukkoPera <software@sukkology.net>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+Name     16up_gal22;
 PartNo   TBD;
 Date     17/10/2022;
 Revision 01;
@@ -22,14 +22,13 @@ Designer SukkoPera;
 Company  OpenRetroWorks;
 Assembly None;
 Location Italy;
-Device   g16v8as;
-
+Device   g20v8as;
 
 ORDER: intExt, addr, phi2, mos6529Cs, aciaCs; 
 
 
 VECTORS:
-/* "Totally wrong" addresses
+/* "Totally wrong" addresses */
 0 '000' 0 HH
 1 '000' 0 HH
 

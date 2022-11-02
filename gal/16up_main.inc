@@ -29,17 +29,6 @@
  * - 6529: $fd70
  */
 
-Name 16up;
-Partno TBD;
-Date 17/10/2022;
-Revision 01;
-Designer SukkoPera;
-Company OpenRetroWorks;
-Assembly None;
-Location Italy;
-Device g22v10;		// Complex Mode (IN = 1-11, 13, IN/OUT = 14-23)
-//~ Device g20v8ma;		// Complex Mode (IN = 1-11, 13, 14, 23 - OUT = 15-16 (no feedback either), IN/OUT = 17-22)
-
 /** Inputs **/
 Pin 1 = a15;
 Pin 2 = a14;
