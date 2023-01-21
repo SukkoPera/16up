@@ -98,6 +98,6 @@ You can also buy me a coffee if you want:
 Inspiration for this board came from an uncompleted [project by Solder/Synergy](http://solder-synergy.de/plus4/hardware/index.html).
 
 Other people from the [Plus/4 World Forum](https://plus4world.powweb.com/forum) helped, in particular:
-* Daniël Mantione for the [for the MOS 6529 replacement circuit](https://www.sellmyretro.com/offer/details/mos-6529-spi-full-equivalent--_-soldering-kit-43923).
+* Daniël Mantione for the [MOS 6529 replacement circuit](https://www.sellmyretro.com/offer/details/mos-6529-spi-full-equivalent--_-soldering-kit-43923).
 * TLC (Levente Hársfalvi) for lots of information about the serial port.
 * MCes for helping fine-tuning of the C16 modification.
