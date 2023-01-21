@@ -26,7 +26,9 @@ This configuration will expose the ACIA and MOS 6529 at the same addresses that 
 
 ## Caveats
 If you perform the C16/116 modification, plug 16UP in the Expansion Port and want to use the Datassette, you will notice that the computer will no longer detect when you press Play upon the *Press Play on tape* prompt. This is absolutely normal and is actually a sign that the modification works as intended. If you really want to use the Datassette you can either remove the board from the Expansion Port or make a Y cable with one female and two male MiniDIN-7 connectors: the Datassette will plug into the female connector, while one of the two male ones will plug into the C16/116 and the other one into the MiniDIN-7 connector on the 16up board.
-Hint: if you want to save wire and effort, it is enough to bring the *Sense* signal - [Pin 6](doc/tapeport.png) - to the connector that plugs into 16UP.
+
+Hint: if you want to save wire and effort, it is enough to bring the *Sense* signal ([Pin 6](doc/tapeport.png)) to the connector that plugs into 16UP.
+
 Another hint: if you use [one of these](https://github.com/SukkoPera/OpenC64TapePortBreakOut) instead of the female connector, you can make an adapter for the C64 (1530) Datassette ;).
 
 Another thing to be aware of is that, since all the serial signals are handled on-board, they are not brought out to the edge connector. This shouldn't be a problem, as there aren't many peripherals using signals from both the parallel and serial ports at the same time. The only one I know are some old Centronics/Printer/PC Parallel Port cables, which need 8 data bits and at least /STROBE and BUSY signals, which are typically tied to /DCD and /RTS: these won't work with this adapter. There was a similar alternative cable designed by Solder/Synergy which only used the parallel port, which will work. Unfortunately I don't know exactly how it was and thus I cannot publish any schematics, but I will investigate. Apart from that, the bottom line is that any odd peripheral that uses any signals besides P1-P8, /ATTN and /RESET just won't work. Please let me know if you happen to stumble into such a thing, as an alternative adapter could be designed.
@@ -96,11 +98,6 @@ You can also buy me a coffee if you want:
 Inspiration for this board came from an uncompleted [project by Solder/Synergy](http://solder-synergy.de/plus4/hardware/index.html).
 
 Other people from the [Plus/4 World Forum](https://plus4world.powweb.com/forum) helped, in particular:
-* Daniël Mantione  for the [74LS652/4-based replacement circuit for the MOS 6529](https://www.sellmyretro.com/offer/details/mos-6529-spi-full-equivalent--_-soldering-kit-43923).
+* Daniël Mantione for the [for the MOS 6529 replacement circuit](https://www.sellmyretro.com/offer/details/mos-6529-spi-full-equivalent--_-soldering-kit-43923).
 * TLC (Levente Hársfalvi) for lots of information about the serial port.
 * MCes for helping fine-tuning of the C16 modification.
-
-## Support the Project
-You can buy me a coffee if you want:
-
-<a href='https://ko-fi.com/L3L0U18L' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
