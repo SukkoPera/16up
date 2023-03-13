@@ -1464,7 +1464,7 @@ F 1 "74HCT04" H 15300 9691 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket_LongPads" H 15300 9465 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 15300 9465 50  0001 C CNN
 	4    15300 9465
-	-1   0    0    -1  
+	1    0    0    -1  
 $EndComp
 $Comp
 L 74xx:74HCT04 U4
@@ -1554,9 +1554,6 @@ F 3 "" H 2635 9305 50  0001 C CNN
 	1    2635 9305
 	1    0    0    -1  
 $EndComp
-NoConn ~ 15000 8885
-NoConn ~ 15000 9465
-NoConn ~ 15600 9465
 NoConn ~ 15600 8885
 Text Notes 15125 8350 0    50   ~ 0
 SPARES
@@ -1874,6 +1871,13 @@ Text Label 13815 6170 0    50   ~ 0
 -9v
 Wire Wire Line
 	13805 2060 13430 2060
+NoConn ~ 15600 9465
+Wire Wire Line
+	15000 8885 14860 8885
+Wire Wire Line
+	14860 8885 14860 9465
+Wire Wire Line
+	15000 9465 14860 9465
 Wire Bus Line
 	15265 5370 15265 6900
 Wire Bus Line
@@ -1898,4 +1902,18 @@ Wire Bus Line
 	3630 2205 3630 3705
 Wire Bus Line
 	5500 1470 5500 2575
+Connection ~ 14860 9465
+Wire Wire Line
+	14860 9465 14860 9625
+$Comp
+L power:GND #PWR?
+U 1 1 6455627D
+P 14860 9625
+F 0 "#PWR?" H 14860 9375 50  0001 C CNN
+F 1 "GND" H 14865 9452 50  0000 C CNN
+F 2 "" H 14860 9625 50  0001 C CNN
+F 3 "" H 14860 9625 50  0001 C CNN
+	1    14860 9625
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
