@@ -70,16 +70,16 @@ If you are looking for a terminal emulator, I recommend [Term-80](https://plus4w
 This is fully functional as on the original +4.
 
 ### /ATTENTION signal
-The /ATTENTION signal is not present on the C16/116 Expansion Port. Thus, if you need it, you will need to provide the board with it through the */ATTN* (*J1*) connector on V2 or through the relevant pin of the J3 pin header on V3. The signal is available on pin 3 of the [IEC (Serial) port](doc/iec_serial.png) and it can be connected in parallel to any other device you already have on that port, just break it out.
+The /ATTENTION signal is not present on the C16/116 Expansion Port. Thus, if you need it, you will need to provide the board with it through the */ATTN* (*J1*) connector on V2 or through the relevant pin of the *J3* pin header on V3. The signal is available on pin 3 of the [IEC (Serial) port](doc/iec_serial.png) and it can be connected in parallel to any other device you already have on that port, just break it out.
 
 ### +5VDC power supply
 This is directly connected to the main power rails of the C16/116. Use common sense and do not draw "too much" power out of it.
 
 ### 9VAC power supply
-This is not present on the C16/116 Expansion Port and thus the corresponding pins of the User Port are left unconnected. This should not be a big deal though, as the main use case for this is to provide the higher voltages needed for a fully-compliant RS-232 interface, but 16UP V2 has that built-in in a way that does not require an actual higher-voltage supply, and the same applies for the recommended adapter for V3. Let me know if you find any User Port peripherals that require it.
+This is not present on the C16/116 Expansion Port and thus the corresponding pins of the User Port are left unconnected on V2, while on V3 they can be powered from the relevant pins of the *J3* pin header. This should not be a big deal though, as the main use case for this is to provide the higher voltages needed for a fully-compliant RS-232 interface but 16UP V2 has that built-in in a way that does not require an actual higher-voltage supply, and the same applies for the recommended adapter for V3. Let me know if you find any User Port peripherals that require it.
 
 ## Assembly
-The parallel port on the +4 is driven through a MOS 6529 (U2 on the board). Since these days that IC is pretty hard to get hold of, an alternative circuit based on a 74LS654 was designed by Daniël Mantione ans was integrated into the board. Depending on what you choose to use:
+The parallel port on the +4 is driven through a MOS 6529 (U2 on the board). Since these days that IC is pretty hard to get hold of, an alternative circuit based on a 74LS654 was designed by Daniël Mantione and integrated into the board. Depending on what you choose to use:
 - If you use an original MOS 6529: do NOT mount RN1.
 - If you use a 74LS654: mount RN1.
 
@@ -98,7 +98,11 @@ This documentation is distributed *as is* and WITHOUT ANY EXPRESS OR IMPLIED WAR
 ## Support the Project
 If you want to get some boards manufactured, you can get them from PCBWay through this link:
 
+### V2
 [![PCB from PCBWay](https://www.pcbway.com/project/img/images/frompcbway.png)](https://www.pcbway.com/project/shareproject/16UP_User_Port_Cartridge_for_the_Commodore_16_116_and_Plus_4_2d0ad268.html)
+
+### V3
+[![PCB from PCBWay](https://www.pcbway.com/project/img/images/frompcbway.png)](https://www.pcbway.com/project/shareproject/16UP_V3_User_Port_Cartridge_for_the_Commodore_16_116_and_Plus_4_e4fbe888.html)
 
 You get my gratitude and cheap, professionally-made and good quality PCBs, I get some credit that will help with this and [other projects](https://www.pcbway.com/project/member/shareproject/?bmbid=41100). You won't even have to worry about the various PCB options, it's all pre-configured for you!
 
