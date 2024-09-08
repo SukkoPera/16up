@@ -5,7 +5,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 1
 Title "16up"
-Date "2024-03-24"
+Date "2024-09-07"
 Rev "3git"
 Comp "SukkoPera & The Folks From The Plus/4 World Forum"
 Comment1 "Licensed under CC BY-NC-SA 4.0"
@@ -1205,23 +1205,23 @@ $EndComp
 $Comp
 L 74xx:74HCT04 U4
 U 4 1 641A935F
-P 15300 9465
-F 0 "U4" H 15300 9782 50  0000 C CNN
-F 1 "74HCT04" H 15300 9691 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket_LongPads" H 15300 9465 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 15300 9465 50  0001 C CNN
-	4    15300 9465
+P 13170 7770
+F 0 "U4" H 13170 8087 50  0000 C CNN
+F 1 "74HCT04" H 13170 7996 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket_LongPads" H 13170 7770 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 13170 7770 50  0001 C CNN
+	4    13170 7770
 	1    0    0    -1  
 $EndComp
 $Comp
 L 74xx:74HCT04 U4
 U 5 1 641AA758
-P 15300 8885
-F 0 "U4" H 15300 9202 50  0000 C CNN
-F 1 "74HCT04" H 15300 9111 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket_LongPads" H 15300 8885 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 15300 8885 50  0001 C CNN
-	5    15300 8885
+P 12365 7770
+F 0 "U4" H 12365 8087 50  0000 C CNN
+F 1 "74HCT04" H 12365 7996 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket_LongPads" H 12365 7770 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 12365 7770 50  0001 C CNN
+	5    12365 7770
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1302,9 +1302,6 @@ F 3 "" H 2635 9305 50  0001 C CNN
 	1    2635 9305
 	1    0    0    -1  
 $EndComp
-NoConn ~ 15600 8885
-Text Notes 15125 8350 0    50   ~ 0
-SPARES
 Text Label 10410 8320 2    50   ~ 0
 dsr_ttl
 Text Label 10410 8860 2    50   ~ 0
@@ -1353,7 +1350,7 @@ Wire Wire Line
 Text Label 15680 2160 2    50   ~ 0
 dsr_ttl
 Text Label 15680 2260 2    50   ~ 0
-txd_ttl
+txd_ttl_out
 Wire Wire Line
 	4230 6090 3485 6090
 Text Label 3485 6090 0    50   ~ 0
@@ -1569,7 +1566,7 @@ Wire Wire Line
 Text Label 15065 6070 2    50   ~ 0
 dsr_ttl
 Text Label 15065 6170 2    50   ~ 0
-txd_ttl
+txd_ttl_out
 Text Label 13430 2060 0    50   ~ 0
 ~attn
 Text Label 13815 5970 0    50   ~ 0
@@ -1619,27 +1616,6 @@ Text Label 13815 6170 0    50   ~ 0
 -9v
 Wire Wire Line
 	13805 2060 13430 2060
-NoConn ~ 15600 9465
-Wire Wire Line
-	15000 8885 14860 8885
-Wire Wire Line
-	14860 8885 14860 9465
-Wire Wire Line
-	15000 9465 14860 9465
-Connection ~ 14860 9465
-Wire Wire Line
-	14860 9465 14860 9625
-$Comp
-L power:GND #PWR0116
-U 1 1 6455627D
-P 14860 9625
-F 0 "#PWR0116" H 14860 9375 50  0001 C CNN
-F 1 "GND" H 14865 9452 50  0000 C CNN
-F 2 "" H 14860 9625 50  0001 C CNN
-F 3 "" H 14860 9625 50  0001 C CNN
-	1    14860 9625
-	1    0    0    -1  
-$EndComp
 $Comp
 L 74LS652:74LS652 U102
 U 1 1 63CCDE81
@@ -1893,6 +1869,53 @@ Wire Wire Line
 	11080 4980 11440 4980
 Text Notes 9250 4025 0    50   ~ 0
 MOS 6529 REPLACEMENT CIRCUIT\nBY DANIEL MANTIONE\n(ALTERNATIVE TO U2)
+$Comp
+L Logic_Programmable:PAL20L8 U1
+U 1 1 6380AE65
+P 6600 2275
+F 0 "U1" H 6820 3080 50  0000 C CNN
+F 1 "GAL20V8" H 6820 1565 50  0000 C CNN
+F 2 "Package_DIP:DIP-24_W7.62mm_Socket_LongPads" H 6600 2275 50  0001 C CNN
+F 3 "" H 6600 2275 50  0001 C CNN
+F 4 "556-AF22V10C15PU" H 6600 2275 50  0001 C CNN "MouserPN"
+F 5 "Either GAL20V8 or GAL22V10 will work" H 6600 2275 50  0001 C CNN "Notes"
+	1    6600 2275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12665 7770 12870 7770
+Wire Wire Line
+	11500 7770 11885 7770
+Text Label 14515 8215 2    50   ~ 0
+txd_ttl_out
+$Comp
+L Jumper:Jumper_3_Open JP2
+U 1 1 66E8EB05
+P 13885 8215
+F 0 "JP2" V 13931 8302 50  0000 L CNN
+F 1 "JMP_TXD_SEL" V 13840 8302 50  0000 L CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm" H 13885 8215 50  0001 C CNN
+F 3 "~" H 13885 8215 50  0001 C CNN
+	1    13885 8215
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	14035 8215 14515 8215
+Wire Wire Line
+	13885 7965 13885 7770
+Wire Wire Line
+	13470 7770 13885 7770
+Wire Wire Line
+	13885 8465 13885 8685
+Wire Wire Line
+	13885 8685 11885 8685
+Wire Wire Line
+	11885 8685 11885 7770
+Connection ~ 11885 7770
+Wire Wire Line
+	11885 7770 12065 7770
+Text Notes 11930 9345 0    50   ~ 0
+All of the different ACIA chips I've tried seem to\nproduce a rather noisy TX signal, so let's put these\ntwo spare gates to some use and buffer it, but still\nallow using the original signal via the jumper.\n\nThis makes more sense if U4 is replaced with a\n74HCT14 (Hex Schmitt Trigger)
 Wire Bus Line
 	15265 5370 15265 6900
 Wire Bus Line
@@ -1917,17 +1940,6 @@ Wire Bus Line
 	3630 2205 3630 3705
 Wire Bus Line
 	5500 1470 5500 2575
-$Comp
-L Logic_Programmable:PAL20L8 U1
-U 1 1 6380AE65
-P 6600 2275
-F 0 "U1" H 6820 3080 50  0000 C CNN
-F 1 "GAL20V8" H 6820 1565 50  0000 C CNN
-F 2 "Package_DIP:DIP-24_W7.62mm_Socket_LongPads" H 6600 2275 50  0001 C CNN
-F 3 "" H 6600 2275 50  0001 C CNN
-F 4 "556-AF22V10C15PU" H 6600 2275 50  0001 C CNN "MouserPN"
-F 5 "Either GAL20V8 or GAL22V10 will work" H 6600 2275 50  0001 C CNN "Notes"
-	1    6600 2275
-	1    0    0    -1  
-$EndComp
+Text Label 11500 7770 0    50   ~ 0
+txd_ttl
 $EndSCHEMATC
