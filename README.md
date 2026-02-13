@@ -110,7 +110,7 @@ Also, if you still have to register, [you can use this link](https://www.pcbway.
 
 You can also buy me a coffee if you want:
 
-<a href='https://ko-fi.com/L3L0U18L' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+<a href='https://ko-fi.com/L3L0U18L' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
 ## Thanks
 Inspiration for this board came from an uncompleted [project by Solder/Synergy](http://solder-synergy.de/plus4/hardware/index.html).
@@ -119,3 +119,4 @@ Other people from the [Plus/4 World Forum](https://plus4world.powweb.com/forum) 
 * Daniël Mantione for the [MOS 6529 replacement circuit](https://www.sellmyretro.com/offer/details/mos-6529-spi-full-equivalent--_-soldering-kit-43923).
 * TLC (Levente Hársfalvi) for lots of information about the serial port.
 * MCes for helping fine-tuning of the C16 modification.
+
