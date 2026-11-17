@@ -5,7 +5,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 1
 Title "16up"
-Date "2026-11-17"
+Date "2026-11-18"
 Rev "4git"
 Comp "SukkoPera & The Folks From The Plus/4 World Forum"
 Comment1 "Licensed under CC BY-NC-SA 4.0"
@@ -735,8 +735,6 @@ Wire Wire Line
 	5730 6590 6005 6590
 Wire Wire Line
 	5730 6690 6005 6690
-NoConn ~ 3185 3305
-NoConn ~ 3185 3405
 Wire Wire Line
 	3485 6390 4230 6390
 Wire Wire Line
@@ -1204,23 +1202,23 @@ $EndComp
 $Comp
 L 74xx:74HCT04 U4
 U 4 1 641A935F
-P 15300 9465
-F 0 "U4" H 15300 9782 50  0000 C CNN
-F 1 "74HCT04" H 15300 9691 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket_LongPads" H 15300 9465 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 15300 9465 50  0001 C CNN
-	4    15300 9465
+P 13730 7960
+F 0 "U4" H 13730 8277 50  0000 C CNN
+F 1 "74HCT04" H 13730 8186 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket_LongPads" H 13730 7960 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 13730 7960 50  0001 C CNN
+	4    13730 7960
 	1    0    0    -1  
 $EndComp
 $Comp
 L 74xx:74HCT04 U4
 U 5 1 641AA758
-P 15300 8885
-F 0 "U4" H 15300 9202 50  0000 C CNN
-F 1 "74HCT04" H 15300 9111 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket_LongPads" H 15300 8885 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 15300 8885 50  0001 C CNN
-	5    15300 8885
+P 12925 7960
+F 0 "U4" H 12925 8277 50  0000 C CNN
+F 1 "74HCT04" H 12925 8186 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket_LongPads" H 12925 7960 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 12925 7960 50  0001 C CNN
+	5    12925 7960
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1301,9 +1299,6 @@ F 3 "" H 2635 9305 50  0001 C CNN
 	1    2635 9305
 	1    0    0    -1  
 $EndComp
-NoConn ~ 15600 8885
-Text Notes 15125 8350 0    50   ~ 0
-SPARES
 Text Label 10410 8320 2    50   ~ 0
 dsr_ttl
 Text Label 10410 8860 2    50   ~ 0
@@ -1352,7 +1347,7 @@ Wire Wire Line
 Text Label 15680 2160 2    50   ~ 0
 dsr_ttl
 Text Label 15680 2260 2    50   ~ 0
-txd_ttl
+txd_ttl_out
 Wire Wire Line
 	4230 6090 3485 6090
 Text Label 3485 6090 0    50   ~ 0
@@ -1568,7 +1563,7 @@ Wire Wire Line
 Text Label 15065 6070 2    50   ~ 0
 dsr_ttl
 Text Label 15065 6170 2    50   ~ 0
-txd_ttl
+txd_ttl_out
 Text Label 13430 2060 0    50   ~ 0
 ~attn
 Text Label 13815 5970 0    50   ~ 0
@@ -1618,27 +1613,6 @@ Text Label 13815 6170 0    50   ~ 0
 -9v
 Wire Wire Line
 	13805 2060 13430 2060
-NoConn ~ 15600 9465
-Wire Wire Line
-	15000 8885 14860 8885
-Wire Wire Line
-	14860 8885 14860 9465
-Wire Wire Line
-	15000 9465 14860 9465
-Connection ~ 14860 9465
-Wire Wire Line
-	14860 9465 14860 9625
-$Comp
-L power:GND #PWR0116
-U 1 1 6455627D
-P 14860 9625
-F 0 "#PWR0116" H 14860 9375 50  0001 C CNN
-F 1 "GND" H 14865 9452 50  0000 C CNN
-F 2 "" H 14860 9625 50  0001 C CNN
-F 3 "" H 14860 9625 50  0001 C CNN
-	1    14860 9625
-	1    0    0    -1  
-$EndComp
 $Comp
 L 74LS652:74LS652 U102
 U 1 1 63CCDE81
@@ -2053,6 +2027,44 @@ F 3 "~" H 7765 2900 50  0001 C CNN
 	1    7765 2900
 	-1   0    0    1   
 $EndComp
+Wire Wire Line
+	13225 7960 13430 7960
+Wire Wire Line
+	12060 7960 12445 7960
+Text Label 15075 8405 2    50   ~ 0
+txd_ttl_out
+$Comp
+L Jumper:Jumper_3_Open JP?
+U 1 1 6B4E4C11
+P 14445 8405
+AR Path="/6B4C457C/6B4E4C11" Ref="JP?"  Part="1" 
+AR Path="/6B4E4C11" Ref="JP3"  Part="1" 
+F 0 "JP3" V 14491 8492 50  0000 L CNN
+F 1 "JMP_TXD_SEL" V 14400 8492 50  0000 L CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm" H 14445 8405 50  0001 C CNN
+F 3 "~" H 14445 8405 50  0001 C CNN
+	1    14445 8405
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	14595 8405 15075 8405
+Wire Wire Line
+	14445 8155 14445 7960
+Wire Wire Line
+	14030 7960 14445 7960
+Wire Wire Line
+	14445 8655 14445 8875
+Wire Wire Line
+	14445 8875 12445 8875
+Wire Wire Line
+	12445 8875 12445 7960
+Connection ~ 12445 7960
+Wire Wire Line
+	12445 7960 12625 7960
+Text Notes 12490 9535 0    50   ~ 0
+All of the different ACIA chips I've tried seem to\nproduce a rather noisy TX signal, so let's put these\ntwo spare gates to some use and buffer it, but still\nallow using the original signal via the jumper.\n\nThis makes more sense if U4 is replaced with a\n74HCT14 (Hex Schmitt Trigger Inverter)
+Text Label 12060 7960 0    50   ~ 0
+txd_ttl
 Wire Bus Line
 	8500 2395 8500 2695
 Wire Bus Line
