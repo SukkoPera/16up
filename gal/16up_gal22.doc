@@ -1,0 +1,143 @@
+
+*******************************************************************************
+                                  16up_gal22
+*******************************************************************************
+
+CUPL(WM)        5.0a Serial# 60008009
+Device          g22v10  Library DLIB-h-40-1
+Created         Tue Nov 10 16:27:05 2026
+Name            16up_gal22
+Partno          TBD
+Revision        01
+Date            17/10/2022
+Designer        SukkoPera
+Company         OpenRetroWorks
+Assembly        None
+Location        Italy
+
+===============================================================================
+                            Expanded Product Terms
+===============================================================================
+
+aciaCs =>
+    !a4 & a5 & a6 & !a7 & a8 & !a9 & a10 & a11 & a12 & a13 & a14 & a15 & 
+      intExt & phi2
+  # !a4 & !a5 & !a6 & !a7 & a8 & !a9 & a10 & a11 & a12 & a13 & a14 & a15 & 
+      !intExt & phi2
+
+addr =>
+    a15 , a14 , a13 , a12 , a11 , a10 , a9 , a8 , a7 , a6 , a5 , a4
+
+cba =>
+    mos6529Cs
+  # rw
+
+ctsOut =>
+    !ctsIn
+
+extRange6529 =>
+    !a03_ored & a4 & a5 & a6 & !a7 & a8 & !a9 & a10 & a11 & a12 & a13 & a14 & 
+      a15
+
+extRangeAcia =>
+    !a4 & a5 & a6 & !a7 & a8 & !a9 & a10 & a11 & a12 & a13 & a14 & a15
+
+gab =>
+    !mos6529Cs & rw
+
+intRange6529 =>
+    !a03_ored & a4 & !a5 & !a6 & !a7 & a8 & !a9 & a10 & a11 & a12 & a13 & a14 & 
+      a15
+
+intRangeAcia =>
+    !a4 & !a5 & !a6 & !a7 & a8 & !a9 & a10 & a11 & a12 & a13 & a14 & a15
+
+mos6529Cs =>
+    !a03_ored & a4 & a5 & a6 & !a7 & a8 & !a9 & a10 & a11 & a12 & a13 & a14 & 
+      a15 & intExt & phi2
+  # !a03_ored & a4 & !a5 & !a6 & !a7 & a8 & !a9 & a10 & a11 & a12 & a13 & a14 & 
+      a15 & !intExt & phi2
+
+a03_ored.oe  =>
+    0 
+
+aciaCs.oe  =>
+    1 
+
+cba.oe  =>
+    1 
+
+ctsIn.oe  =>
+    0 
+
+ctsOut.oe  =>
+    1 
+
+gab.oe  =>
+    1 
+
+intExt.oe  =>
+    0 
+
+mos6529Cs.oe  =>
+    1 
+
+phi2.oe  =>
+    0 
+
+rw.oe  =>
+    0 
+
+
+===============================================================================
+                                 Symbol Table
+===============================================================================
+
+Pin Variable                                    Pterms   Max     Min    
+Pol   Name              Ext     Pin     Type     Used   Pterms  Level   
+--- --------            ---     ---     ----    ------  ------  -----   
+
+    a03_ored                    20       V        -       -       -     
+    a4                          13       V        -       -       -     
+    a5                          11       V        -       -       -     
+    a6                          10       V        -       -       -     
+    a7                          9        V        -       -       -     
+    a8                          8        V        -       -       -     
+    a9                          7        V        -       -       -     
+    a10                         6        V        -       -       -     
+    a11                         5        V        -       -       -     
+    a12                         4        V        -       -       -     
+    a13                         3        V        -       -       -     
+    a14                         2        V        -       -       -     
+    a15                         1        V        -       -       -     
+    aciaCs                      15       V        2       10      2     
+    addr                        0        F        -       -       -     
+    cba                         21       V        2       12      2     
+    ctsIn                       18       V        -       -       -     
+    ctsOut                      17       V        1       14      2     
+    extRange6529                0        I        1       -       -     
+    extRangeAcia                0        I        1       -       -     
+    gab                         22       V        1       10      2     
+    intExt                      14       V        -       -       -     
+    intRange6529                0        I        1       -       -     
+    intRangeAcia                0        I        1       -       -     
+    mos6529Cs                   16       V        2       12      2     
+    phi2                        23       V        -       -       -     
+    rw                          19       V        -       -       -     
+    a03_ored            oe      20       D        1       1       0     
+    aciaCs              oe      15       D        1       1       0     
+    cba                 oe      21       D        1       1       0     
+    ctsIn               oe      18       D        1       1       0     
+    ctsOut              oe      17       D        1       1       0     
+    gab                 oe      22       D        1       1       0     
+    intExt              oe      14       D        1       1       0     
+    mos6529Cs           oe      16       D        1       1       0     
+    phi2                oe      23       D        1       1       0     
+    rw                  oe      19       D        1       1       0     
+
+
+LEGEND    D : default variable         F : field      G : group
+          I : intermediate variable    N : node       M : extended node
+          U : undefined                V : variable   X : extended variable
+          T : function
+

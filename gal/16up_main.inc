@@ -42,6 +42,7 @@ Pin 9 = a7;
 Pin 10 = a6;
 Pin 11 = a5;
 Pin 13 = a4;
+Pin 20 = a03_ored;
 Pin 23 = phi2;
 
 Pin 19 = rw;
@@ -69,8 +70,8 @@ Field addr = [a15..4];
 
 
 /** Logic Equations **/
-intRange6529 = addr:FD1x;
-extRange6529 = addr:FD7x;
+intRange6529 = addr:FD1x & !a03_ored;
+extRange6529 = addr:FD7x & !a03_ored;
 mos6529Cs = !(phi2 & ((!intExt & intRange6529) # (intExt & extRange6529)));
 
 intRangeAcia = addr:FD0x;

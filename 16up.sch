@@ -5,8 +5,8 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 1
 Title "16up"
-Date "2024-03-24"
-Rev "3git"
+Date "2026-11-17"
+Rev "4git"
 Comp "SukkoPera & The Folks From The Plus/4 World Forum"
 Comment1 "Licensed under CC BY-NC-SA 4.0"
 Comment2 ""
@@ -986,7 +986,7 @@ L Connector:Conn_01x03_Male JP1
 U 1 1 63A6BB80
 P 5050 2775
 F 0 "JP1" H 5023 2707 50  0000 R CNN
-F 1 "JMP_ADDRESS" H 5023 2798 50  0000 R CNN
+F 1 "JMP_INTEXT" H 5023 2798 50  0000 R CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 5050 2775 50  0001 C CNN
 F 3 "~" H 5050 2775 50  0001 C CNN
 	1    5050 2775
@@ -1111,7 +1111,6 @@ NoConn ~ 5490 10060
 NoConn ~ 5490 10160
 Wire Wire Line
 	5790 9760 5790 9675
-NoConn ~ 7100 1775
 Text Label 6420 9675 2    50   ~ 0
 ~cassette_sense
 Entry Wire Line
@@ -1893,6 +1892,169 @@ Wire Wire Line
 	11080 4980 11440 4980
 Text Notes 9250 4025 0    50   ~ 0
 MOS 6529 REPLACEMENT CIRCUIT\nBY DANIEL MANTIONE\n(ALTERNATIVE TO U2)
+$Comp
+L Logic_Programmable:PAL20L8 U1
+U 1 1 6380AE65
+P 6600 2275
+F 0 "U1" H 6820 3080 50  0000 C CNN
+F 1 "GAL20V8" H 6820 1565 50  0000 C CNN
+F 2 "Package_DIP:DIP-24_W7.62mm_Socket_LongPads" H 6600 2275 50  0001 C CNN
+F 3 "" H 6600 2275 50  0001 C CNN
+F 4 "556-AF22V10C15PU" H 6600 2275 50  0001 C CNN "MouserPN"
+F 5 "Either GAL20V8 or GAL22V10 will work" H 6600 2275 50  0001 C CNN "Notes"
+	1    6600 2275
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D4
+U 1 1 6AFA0136
+P 8035 2295
+F 0 "D4" H 8145 2335 50  0000 C CNN
+F 1 "1n4148" H 8035 2421 50  0001 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_KathodeUp" H 8035 2295 50  0001 C CNN
+F 3 "~" H 8035 2295 50  0001 C CNN
+	1    8035 2295
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D3
+U 1 1 6AFA1224
+P 8035 2395
+F 0 "D3" H 8145 2435 50  0000 C CNN
+F 1 "1n4148" H 8035 2521 50  0001 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_KathodeUp" H 8035 2395 50  0001 C CNN
+F 3 "~" H 8035 2395 50  0001 C CNN
+	1    8035 2395
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D2
+U 1 1 6AFA13F2
+P 8035 2495
+F 0 "D2" H 8145 2535 50  0000 C CNN
+F 1 "1n4148" H 8035 2621 50  0001 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_KathodeUp" H 8035 2495 50  0001 C CNN
+F 3 "~" H 8035 2495 50  0001 C CNN
+	1    8035 2495
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D1
+U 1 1 6AFA1B3D
+P 8035 2595
+F 0 "D1" H 8145 2640 50  0000 C CNN
+F 1 "1n4148" H 8035 2480 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_KathodeUp" H 8035 2595 50  0001 C CNN
+F 3 "~" H 8035 2595 50  0001 C CNN
+	1    8035 2595
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7870 1875 7870 1950
+$Comp
+L power:GND #PWR07
+U 1 1 6AFD99DD
+P 7870 1950
+F 0 "#PWR07" H 7870 1700 50  0001 C CNN
+F 1 "GND" H 7875 1777 50  0000 C CNN
+F 2 "" H 7870 1950 50  0001 C CNN
+F 3 "" H 7870 1950 50  0001 C CNN
+	1    7870 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7885 2295 7765 2295
+Wire Wire Line
+	7885 2395 7765 2395
+Connection ~ 7765 2395
+Wire Wire Line
+	7765 2395 7765 2495
+Wire Wire Line
+	7885 2495 7765 2495
+Connection ~ 7765 2495
+Wire Wire Line
+	7765 2495 7765 2595
+Wire Wire Line
+	7885 2595 7765 2595
+Connection ~ 7765 2595
+Wire Wire Line
+	7765 2595 7765 2750
+Wire Wire Line
+	8185 2295 8400 2295
+Wire Wire Line
+	8185 2395 8400 2395
+Wire Wire Line
+	8185 2495 8400 2495
+Wire Wire Line
+	8185 2595 8400 2595
+Entry Wire Line
+	8400 2295 8500 2395
+Entry Wire Line
+	8400 2395 8500 2495
+Entry Wire Line
+	8400 2495 8500 2595
+Entry Wire Line
+	8400 2595 8500 2695
+Wire Bus Line
+	8500 2695 9025 2695
+Text Label 9025 2695 2    50   ~ 0
+address_bus
+Text Label 8400 2295 2    50   ~ 0
+a3
+Text Label 8400 2395 2    50   ~ 0
+a2
+Text Label 8400 2495 2    50   ~ 0
+a1
+Text Label 8400 2595 2    50   ~ 0
+a0
+$Comp
+L Connector:Conn_01x03_Male JP2
+U 1 1 6B1D1EDA
+P 8180 1775
+F 0 "JP2" H 8153 1707 50  0000 R CNN
+F 1 "JMP_FD0X" H 8153 1798 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 8180 1775 50  0001 C CNN
+F 3 "~" H 8180 1775 50  0001 C CNN
+	1    8180 1775
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 1775 7980 1775
+Connection ~ 7765 2295
+Wire Wire Line
+	7765 2295 7765 2395
+Wire Wire Line
+	7765 1675 7980 1675
+Wire Wire Line
+	7765 1675 7765 2295
+Wire Wire Line
+	7870 1875 7980 1875
+Wire Wire Line
+	7765 3050 7765 3125
+$Comp
+L power:GND #PWR0117
+U 1 1 6B375BC8
+P 7765 3125
+F 0 "#PWR0117" H 7765 2875 50  0001 C CNN
+F 1 "GND" H 7770 2952 50  0000 C CNN
+F 2 "" H 7765 3125 50  0001 C CNN
+F 3 "" H 7765 3125 50  0001 C CNN
+	1    7765 3125
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 6AFD8568
+P 7765 2900
+F 0 "R3" H 7695 2854 50  0000 R CNN
+F 1 "4.7k" H 7695 2945 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 7695 2900 50  0001 C CNN
+F 3 "~" H 7765 2900 50  0001 C CNN
+	1    7765 2900
+	-1   0    0    1   
+$EndComp
+Wire Bus Line
+	8500 2395 8500 2695
 Wire Bus Line
 	15265 5370 15265 6900
 Wire Bus Line
@@ -1917,17 +2079,4 @@ Wire Bus Line
 	3630 2205 3630 3705
 Wire Bus Line
 	5500 1470 5500 2575
-$Comp
-L Logic_Programmable:PAL20L8 U1
-U 1 1 6380AE65
-P 6600 2275
-F 0 "U1" H 6820 3080 50  0000 C CNN
-F 1 "GAL20V8" H 6820 1565 50  0000 C CNN
-F 2 "Package_DIP:DIP-24_W7.62mm_Socket_LongPads" H 6600 2275 50  0001 C CNN
-F 3 "" H 6600 2275 50  0001 C CNN
-F 4 "556-AF22V10C15PU" H 6600 2275 50  0001 C CNN "MouserPN"
-F 5 "Either GAL20V8 or GAL22V10 will work" H 6600 2275 50  0001 C CNN "Notes"
-	1    6600 2275
-	1    0    0    -1  
-$EndComp
 $EndSCHEMATC
